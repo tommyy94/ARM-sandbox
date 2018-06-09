@@ -7,6 +7,7 @@ MDK-ARM		# Config not yet finished
 # IAR Settings  
 *.dep
 *.ewt
+*.dnx
 
 *.crun  
 *.dbgdt  
