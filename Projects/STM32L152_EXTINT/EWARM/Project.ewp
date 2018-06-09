@@ -2093,48 +2093,56 @@
             <name>$PROJ_DIR$\..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_adc.c</name>
             <excluded>
                 <configuration>Debug</configuration>
+                <configuration>Release</configuration>
             </excluded>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_aes.c</name>
             <excluded>
                 <configuration>Debug</configuration>
+                <configuration>Release</configuration>
             </excluded>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_aes_util.c</name>
             <excluded>
                 <configuration>Debug</configuration>
+                <configuration>Release</configuration>
             </excluded>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_comp.c</name>
             <excluded>
                 <configuration>Debug</configuration>
+                <configuration>Release</configuration>
             </excluded>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_crc.c</name>
             <excluded>
                 <configuration>Debug</configuration>
+                <configuration>Release</configuration>
             </excluded>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dac.c</name>
             <excluded>
                 <configuration>Debug</configuration>
+                <configuration>Release</configuration>
             </excluded>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dbgmcu.c</name>
             <excluded>
                 <configuration>Debug</configuration>
+                <configuration>Release</configuration>
             </excluded>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dma.c</name>
             <excluded>
                 <configuration>Debug</configuration>
+                <configuration>Release</configuration>
             </excluded>
         </file>
         <file>
@@ -2144,18 +2152,21 @@
             <name>$PROJ_DIR$\..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_flash.c</name>
             <excluded>
                 <configuration>Debug</configuration>
+                <configuration>Release</configuration>
             </excluded>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_flash_ramfunc.c</name>
             <excluded>
                 <configuration>Debug</configuration>
+                <configuration>Release</configuration>
             </excluded>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_fsmc.c</name>
             <excluded>
                 <configuration>Debug</configuration>
+                <configuration>Release</configuration>
             </excluded>
         </file>
         <file>
@@ -2165,30 +2176,35 @@
             <name>$PROJ_DIR$\..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_i2c.c</name>
             <excluded>
                 <configuration>Debug</configuration>
+                <configuration>Release</configuration>
             </excluded>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_iwdg.c</name>
             <excluded>
                 <configuration>Debug</configuration>
+                <configuration>Release</configuration>
             </excluded>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_lcd.c</name>
             <excluded>
                 <configuration>Debug</configuration>
+                <configuration>Release</configuration>
             </excluded>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_opamp.c</name>
             <excluded>
                 <configuration>Debug</configuration>
+                <configuration>Release</configuration>
             </excluded>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_pwr.c</name>
             <excluded>
                 <configuration>Debug</configuration>
+                <configuration>Release</configuration>
             </excluded>
         </file>
         <file>
@@ -2198,18 +2214,21 @@
             <name>$PROJ_DIR$\..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rtc.c</name>
             <excluded>
                 <configuration>Debug</configuration>
+                <configuration>Release</configuration>
             </excluded>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_sdio.c</name>
             <excluded>
                 <configuration>Debug</configuration>
+                <configuration>Release</configuration>
             </excluded>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_spi.c</name>
             <excluded>
                 <configuration>Debug</configuration>
+                <configuration>Release</configuration>
             </excluded>
         </file>
         <file>
@@ -2219,18 +2238,21 @@
             <name>$PROJ_DIR$\..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_tim.c</name>
             <excluded>
                 <configuration>Debug</configuration>
+                <configuration>Release</configuration>
             </excluded>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_usart.c</name>
             <excluded>
                 <configuration>Debug</configuration>
+                <configuration>Release</configuration>
             </excluded>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\Libraries\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_wwdg.c</name>
             <excluded>
                 <configuration>Debug</configuration>
+                <configuration>Release</configuration>
             </excluded>
         </file>
     </group>
