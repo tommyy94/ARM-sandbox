@@ -1,0 +1,284 @@
+###############################################################################
+#
+# IAR ELF Linker V8.22.2.15995/W32 for ARM                09/Jun/2018  16:24:57
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Exe\STM32L152-EVAL.out
+#    Map file     =  
+#        C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\List\STM32L152-EVAL.map
+#    Command line =  
+#        -f C:\Users\Tommy\AppData\Local\Temp\EWB8E3.tmp
+#        ("C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\main.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\misc.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\startup_stm32l1xx_xl.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_adc.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_aes.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_aes_util.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_comp.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_crc.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_dac.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_dbgmcu.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_dma.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_exti.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_flash.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_flash_ramfunc.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_fsmc.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_gpio.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_i2c.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_it.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_iwdg.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_lcd.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_opamp.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_pwr.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_rcc.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_rtc.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_sdio.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_spi.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_syscfg.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_tim.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_usart.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\stm32l1xx_wwdg.o"
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj\system_stm32l1xx.o"
+#        --redirect _Printf=_PrintfFull --redirect _Scanf=_ScanfFull -o
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\Exe\STM32L152-EVAL.out"
+#        --map "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\Release\List\STM32L152-EVAL.map"
+#        --config "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\STM32L152_EXTINT\EWARM\stm32l1xx_flash.icf"
+#        --semihosting --entry __iar_program_start --inline --no_exceptions
+#        --merge_duplicate_sections --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x08000000 { ro section .intvec };
+"P1":  place in [from 0x08000000 to 0x0807ffff] { ro };
+define block CSTACK with size = 1K, alignment = 8 { };
+define block HEAP with size = 512, alignment = 8 { };
+"P2":  place in [from 0x20000000 to 0x20013fff] {
+          rw, block CSTACK, block HEAP };
+
+  Section          Kind        Address   Size  Object
+  -------          ----        -------   ----  ------
+"A0":                                   0x124
+  .intvec          ro code  0x08000000  0x124  startup_stm32l1xx_xl.o [1]
+                          - 0x08000124  0x124
+
+"P1":                                   0x4c8
+  .text            ro code  0x08000124  0x100  system_stm32l1xx.o [1]
+  .text            ro code  0x08000224   0xf0  main.o [1]
+  .text            ro code  0x08000314   0x2c  stm32l1xx_rcc.o [1]
+  .text            ro code  0x08000340   0x86  stm32l1xx_gpio.o [1]
+  .text            ro code  0x080003c8   0x28  stm32l1xx_syscfg.o [1]
+  .text            ro code  0x080003f0   0x84  stm32l1xx_exti.o [1]
+  .text            ro code  0x08000474   0x68  misc.o [1]
+  .text            ro code  0x080004dc   0x40  zero_init3.o [4]
+  .text            ro code  0x0800051c   0x34  stm32l1xx_it.o [1]
+  .text            ro code  0x08000550   0x28  data_init.o [4]
+  .iar.init_table  const    0x08000578   0x10  - Linker created -
+  .text            ro code  0x08000588   0x1e  cmain.o [4]
+  .text            ro code  0x080005a6    0x4  exit.o [3]
+  .text            ro code  0x080005ac    0xa  cexit.o [4]
+  .text            ro code  0x080005b8   0x14  exit.o [5]
+  .text            ro code  0x080005cc   0x10  startup_stm32l1xx_xl.o [1]
+  .text            ro code  0x080005dc    0xc  cstartup_M.o [4]
+  .text            ro code  0x080005e8    0x4  startup_stm32l1xx_xl.o [1]
+  .rodata          const    0x080005ec    0x0  zero_init3.o [4]
+                          - 0x080005ec  0x4c8
+
+"P2", part 1 of 2:                       0x24
+  .bss             zero     0x20000000   0x14  main.o [1]
+  .bss             zero     0x20000014   0x10  main.o [1]
+                          - 0x20000024   0x24
+
+"P2", part 2 of 2:                      0x400
+  CSTACK                    0x20000028  0x400  <Block>
+    CSTACK         uninit   0x20000028  0x400  <Block tail>
+                          - 0x20000428  0x400
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x24:
+          0x20000000  0x24
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+C:\Users\Tommy\Documents\ARM Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj: [1]
+    main.o                      240                36
+    misc.o                      104
+    startup_stm32l1xx_xl.o      312
+    stm32l1xx_exti.o            132
+    stm32l1xx_gpio.o            134
+    stm32l1xx_it.o               52
+    stm32l1xx_rcc.o              44
+    stm32l1xx_syscfg.o           40
+    system_stm32l1xx.o          256
+    -------------------------------------------------
+    Total:                    1 314                36
+
+command line: [2]
+    -------------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    exit.o                        4
+    -------------------------------------------------
+    Total:                        4
+
+rt7M_tl.a: [4]
+    cexit.o                      10
+    cmain.o                      30
+    cstartup_M.o                 12
+    data_init.o                  40
+    zero_init3.o                 64
+    -------------------------------------------------
+    Total:                      156
+
+shb_l.a: [5]
+    exit.o                       20
+    -------------------------------------------------
+    Total:                       20
+
+    Gaps                          6
+    Linker created                        16    1 024
+-----------------------------------------------------
+    Grand Total:              1 500       16    1 060
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address  Size  Type      Object
+-----                      -------  ----  ----      ------
+.iar.init_table$$Base   0x08000578         --   Gb  - Linker created -
+.iar.init_table$$Limit  0x08000588         --   Gb  - Linker created -
+?main                   0x08000589        Code  Gb  cmain.o [4]
+BusFault_Handler        0x08000523   0x2  Code  Gb  stm32l1xx_it.o [1]
+CSTACK$$Base            0x20000028         --   Gb  - Linker created -
+CSTACK$$Limit           0x20000428         --   Gb  - Linker created -
+DebugMon_Handler        0x08000529   0x2  Code  Gb  stm32l1xx_it.o [1]
+EXTI0_Config            0x080002a3  0x60  Code  Gb  main.o [1]
+EXTI0_IRQHandler        0x0800052f  0x1c  Code  Gb  stm32l1xx_it.o [1]
+EXTI_ClearITPendingBit  0x08000463   0x2  Code  Gb  stm32l1xx_exti.o [1]
+EXTI_GetITStatus        0x08000453  0x10  Code  Gb  stm32l1xx_exti.o [1]
+EXTI_Init               0x080003f1  0x62  Code  Gb  stm32l1xx_exti.o [1]
+EXTI_InitStructure      0x20000008   0x8  Data  Gb  main.o [1]
+GPIO_Init               0x08000341  0x5e  Code  Gb  stm32l1xx_gpio.o [1]
+GPIO_InitStructure      0x20000000   0x8  Data  Gb  main.o [1]
+GPIO_LedStructure       0x20000014   0x8  Data  Gb  main.o [1]
+GPIO_ReadInputDataBit   0x080003b1   0xe  Code  Gb  stm32l1xx_gpio.o [1]
+GPIO_StructInit         0x0800039f  0x12  Code  Gb  stm32l1xx_gpio.o [1]
+GPIO_SwitchStructure    0x2000001c   0x8  Data  Gb  main.o [1]
+GPIO_ToggleBits         0x080003bf   0x8  Code  Gb  stm32l1xx_gpio.o [1]
+HardFault_Handler       0x0800051f   0x2  Code  Gb  stm32l1xx_it.o [1]
+MemManage_Handler       0x08000521   0x2  Code  Gb  stm32l1xx_it.o [1]
+NMI_Handler             0x0800051d   0x2  Code  Gb  stm32l1xx_it.o [1]
+NVIC_Init               0x08000475  0x56  Code  Gb  misc.o [1]
+NVIC_InitStructure      0x20000010   0x4  Data  Gb  main.o [1]
+PendSV_Handler          0x0800052b   0x2  Code  Gb  stm32l1xx_it.o [1]
+RCC_AHBPeriphClockCmd   0x08000315  0x12  Code  Gb  stm32l1xx_rcc.o [1]
+RCC_APB2PeriphClockCmd  0x08000327  0x12  Code  Gb  stm32l1xx_rcc.o [1]
+Region$$Table$$Base     0x08000578         --   Gb  - Linker created -
+Region$$Table$$Limit    0x08000588         --   Gb  - Linker created -
+SVC_Handler             0x08000527   0x2  Code  Gb  stm32l1xx_it.o [1]
+SYSCFG_EXTILineConfig   0x080003c9  0x22  Code  Gb  stm32l1xx_syscfg.o [1]
+SysTick_Handler         0x0800052d   0x2  Code  Gb  stm32l1xx_it.o [1]
+SystemInit              0x08000125  0xe6  Code  Gb  system_stm32l1xx.o [1]
+UsageFault_Handler      0x08000525   0x2  Code  Gb  stm32l1xx_it.o [1]
+__cmain                 0x08000589        Code  Gb  cmain.o [4]
+__exit                  0x080005b9  0x14  Code  Gb  exit.o [5]
+__iar_data_init3        0x08000551  0x28  Code  Gb  data_init.o [4]
+__iar_program_start     0x080005dd        Code  Gb  cstartup_M.o [4]
+__iar_systems$$module {Abs}
+                        0x00000001        Data  Gb  command line/config [2]
+__iar_zero_init3        0x080004dd  0x40  Code  Gb  zero_init3.o [4]
+__vector_table          0x08000000        Data  Gb  startup_stm32l1xx_xl.o [1]
+_call_main              0x08000595        Code  Gb  cmain.o [4]
+_exit                   0x080005ad        Code  Gb  cexit.o [4]
+_main                   0x080005a3        Code  Gb  cmain.o [4]
+delay_loop              0x08000293  0x10  Code  Gb  main.o [1]
+exit                    0x080005a7   0x4  Code  Gb  exit.o [3]
+main                    0x08000225  0x6e  Code  Gb  main.o [1]
+
+
+[1] = C:\Users\Tommy\Documents\ARM Projects\Projects\STM32L152_EXTINT\EWARM\Release\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+  1 500 bytes of readonly  code memory
+     16 bytes of readonly  data memory
+  1 060 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
