@@ -33,8 +33,6 @@
   */
 
 /* Private typedef -----------------------------------------------------------*/
-GPIO_InitTypeDef GPIO_LedStructure;
-GPIO_InitTypeDef GPIO_SwitchStructure;
 GPIO_InitTypeDef GPIO_InitStructure;
 EXTI_InitTypeDef EXTI_InitStructure;
 NVIC_InitTypeDef NVIC_InitStructure;
@@ -45,6 +43,7 @@ NVIC_InitTypeDef NVIC_InitStructure;
 /* Private function prototypes -----------------------------------------------*/
 void delay_loop(void);
 void EXTI0_Config(void);
+void GPIO_Config(void);
 
 
 /* Private functions ---------------------------------------------------------*/
@@ -66,26 +65,7 @@ int main(void)
   /* Add your application code here
      */
   
-  RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOB, ENABLE);
-  /* led configuration */
-  GPIO_StructInit(&GPIO_LedStructure);
-  GPIO_LedStructure.GPIO_Pin = (GPIO_Pin_2 | GPIO_Pin_1);
-  GPIO_LedStructure.GPIO_Mode = GPIO_Mode_OUT;
-  GPIO_LedStructure.GPIO_OType = GPIO_OType_PP;
-  GPIO_LedStructure.GPIO_PuPd = GPIO_PuPd_UP;
-  GPIO_LedStructure.GPIO_Speed = GPIO_Speed_40MHz;
-  GPIO_Init(GPIOB, &GPIO_LedStructure);
-
-  /* switch configuration */
-  GPIO_StructInit(&GPIO_SwitchStructure);
-  GPIO_SwitchStructure.GPIO_Pin = GPIO_Pin_0;
-  GPIO_SwitchStructure.GPIO_Mode = GPIO_Mode_IN;
-  GPIO_LedStructure.GPIO_OType = GPIO_OType_PP;
-  GPIO_SwitchStructure.GPIO_PuPd = GPIO_PuPd_UP;
-  GPIO_Init(GPIOB, &GPIO_SwitchStructure);
-  
-  //Led_Config();
-  //Switch_Config();
+  GPIO_Config();
   EXTI0_Config();
   
   /* Infinite loop */
@@ -144,6 +124,34 @@ void EXTI0_Config(void)
   NVIC_Init(&NVIC_InitStructure);
 }
 
+
+/**
+  * @brief  Configure GPIO
+  * @param  None
+  * @retval None
+  */
+void GPIO_Config(void)
+{
+  /* enable GPIOB clock */
+  RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOB, ENABLE);
+  
+  /* led configuration */
+  GPIO_StructInit(&GPIO_InitStructure);
+  GPIO_InitStructure.GPIO_Pin = (GPIO_Pin_2 | GPIO_Pin_1);
+  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
+  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
+  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_40MHz;
+  GPIO_Init(GPIOB, &GPIO_InitStructure);
+
+  /* switch configuration */
+  GPIO_StructInit(&GPIO_InitStructure);
+  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
+  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
+  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
+  GPIO_Init(GPIOB, &GPIO_InitStructure);
+}
 
   
 #ifdef  USE_FULL_ASSERT
