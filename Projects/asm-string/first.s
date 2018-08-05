@@ -1,3 +1,5 @@
+; MCU = STMl32F100RB
+
 ; Directives
     PRESERVE8
     THUMB       
