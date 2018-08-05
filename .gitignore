@@ -1,8 +1,11 @@
 readme.txt
 Release_Notes.html
 /Projects/CORTEX_STM32L152_IAR
-MDK-ARM		# Config not yet finished
+MDK-ARM
 *.bak
+*.o
+*.axf
+*.d
 
 # IAR Settings  
 *.dep
