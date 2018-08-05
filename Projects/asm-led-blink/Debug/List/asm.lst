@@ -1,0 +1,1668 @@
+###############################################################################
+#                                                                             #
+#     IAR Assembler V8.22.2.15995/W32 for ARM 05/Aug/2018  18:00:54           #
+#     Copyright 1999-2018 IAR Systems AB.                                     #
+#                                                                             #
+#           Source file   =  C:\Users\Tommy\Documents\ARM Projects\Projects\asm-led-blink\asm.s#
+#           List file     =  C:\Users\Tommy\Documents\ARM Projects\Projects\asm-led-blink\Debug\List\asm.lst#
+#           Object file   =  C:\Users\Tommy\Documents\ARM Projects\Projects\asm-led-blink\Debug\Obj\asm.o#
+#           Command line  =  -f C:\Users\Tommy\AppData\Local\Temp\EWCCCB.tmp  #
+#                            (C:\Users\Tommy\Documents\ARM Projects\Projects\asm-led-blink\asm.s #
+#                            -OC:\Users\Tommy\Documents\ARM Projects\Projects\asm-led-blink\Debug\Obj #
+#                            -s+ -M<> -w+ -r -j                               #
+#                            -LC:\Users\Tommy\Documents\ARM Projects\Projects\asm-led-blink\Debug\List #
+#                            -cAOM -i -B -t8 --cpu Cortex-M3 --fpu None)      #
+#                                                                             #
+###############################################################################
+
+                                                ldr     R6, =RCC_APB2ENR      
+                         ; R6 is pointer to register
+                                ----------------------------------------------
+                       -----------------------------^
+                                "C:\Users\Tommy\Documents\ARM Projects\Project
+                       s\asm-led-blink\asm.s",22  Warning[440]: The section
+                        alignment is less than 2
+                                ^2. Data in literal pool may be misaligned
+                        after linking.
+                                                ldr     R6, =GPIOC_CRH
+                                --------------------------------------^
+                                "C:\Users\Tommy\Documents\ARM Projects\Project
+                       s\asm-led-blink\asm.s",28  Warning[440]: The section
+                        alignment is less than 2
+                                ^2. Data in literal pool may be misaligned
+                        after linking.
+                                                ldr     R0, =0x44444433     ;
+                        CNF: 00, Mode: 11
+                                ----------------------------------------------
+                       -----------------^
+                                "C:\Users\Tommy\Documents\ARM Projects\Project
+                       s\asm-led-blink\asm.s",29  Warning[440]: The section
+                        alignment is less than 2
+                                ^2. Data in literal pool may be misaligned
+                        after linking.
+                                                ldr     R6, =GPIOC_ODR      ;
+                        Pointer to Port C output data register
+                                ----------------------------------------------
+                       --------------------------------------^
+                                "C:\Users\Tommy\Documents\ARM Projects\Project
+                       s\asm-led-blink\asm.s",34  Warning[440]: The section
+                        alignment is less than 2
+                                ^2. Data in literal pool may be misaligned
+                        after linking.
+                                         LTORG ; generated
+                                ---------------^
+                                "C:\Users\Tommy\Documents\ARM Projects\Project
+                       s\asm-led-blink\asm.s",45  Warning[22]: Set section
+                        alignment the same (2) or
+                                 larger
+
+
+    1                           #define __ICCARM__ 1
+    2                           #include "C:\Program Files (x86)\IAR
+                                 Systems\Embedded Workbench 8.0\arm\inc\ST\iost
+                                m32f100xB.h"
+    1                           /*********************************************
+                                ******************************
+    2                            **
+    3                            **    This file defines the Special Function
+                                 Registers for
+    4                            **    ST STM32F100xB
+    5                            **
+    6                            **    Used with ARM IAR C/C++ Compiler and
+                                 Assembler
+    7                            **
+    8                            **    (c) Copyright IAR Systems 2010
+    9                            **
+   10                            **    $Revision: 4610 $
+   11                            **
+   12                            *********************************************
+                                ******************************/
+   13                           
+   14                           #ifndef __IOSTM32F100xB_H
+   15                           #define __IOSTM32F100xB_H
+   16                           
+   17                           #if ( __ICCARM__ != 1 )
+   18                           #error This file should only be compiled by
+                                 ARM IAR compiler and assembler
+   19                           #endif
+   20                           
+   21                           #include "io_macros.h"
+    1                           /*********************************************
+                                *****
+    2                            *
+    3                            * Macro declarations used for peripheral
+                                 I/O
+    4                            * declarations for ARM IAR Assembler.
+    5                            *
+    6                            * Copyright 1999-2017 IAR Systems AB.
+    7                            *
+    8                            *********************************************
+                                *****/
+    9                           
+   10                           #ifndef __IO_MACROS_H
+   11                           #define __IO_MACROS_H
+   12                           
+   13                           /*********************************************
+                                **
+   14                            *      Assembler specific macros
+   15                            *********************************************
+                                **/
+   16                           
+   17                           #ifdef __IAR_SYSTEMS_ASM__
+   18                           
+   19                           /*********************************************
+                                **
+   20                            * I/O reg attributes (ignored)
+   21                            *********************************************
+                                **/
+   22                           #define __READ_WRITE 0
+   23                           #define __READ 0
+   24                           #define __WRITE 0
+   25                           
+   26                           /*********************************************
+                                **
+   27                            * Define NAME as an I/O reg
+   28                            *********************************************
+                                **/
+   29                           #define __IO_REG8(NAME, ADDRESS, ATTRIBUTE)   
+                                   \
+   31                           
+   32                           #define __IO_REG16(NAME, ADDRESS, ATTRIBUTE)  
+                                   \
+   34                           
+   35                           #define __IO_REG32(NAME, ADDRESS, ATTRIBUTE)  
+                                   \
+   37                           
+   38                           /*********************************************
+                                **
+   39                            * Define NAME as an I/O reg
+   40                            *********************************************
+                                **/
+   41                           #define __IO_REG8_BIT(NAME, ADDRESS,
+                                 ATTRIBUTE, BIT_STRUCT)  \
+   43                           
+   44                           #define __IO_REG16_BIT(NAME, ADDRESS,
+                                 ATTRIBUTE, BIT_STRUCT) \
+   46                           
+   47                           #define __IO_REG32_BIT(NAME, ADDRESS,
+                                 ATTRIBUTE, BIT_STRUCT) \
+   49                           
+   50                           #endif /* __IAR_SYSTEMS_ASM__ */
+   51                           
+   52                           #endif /* __IO_MACROS_H */
+   22                           
+   23                           /*********************************************
+                                ******************************
+   24                            *********************************************
+                                ******************************
+   25                            **
+   26                            **   STM32F100xB SPECIAL FUNCTION REGISTERS
+   27                            **
+   28                            *********************************************
+                                ******************************
+   29                            *********************************************
+                                ******************************
+   30                            *********************************************
+                                ******************************/
+   31                           
+   32                           
+   33                           /* C-compiler specific declarations 
+                                 ***************************************/
+   34                           
+   35                           #ifdef __IAR_SYSTEMS_ICC__
+   37                           #ifndef _SYSTEM_BUILD
+   38                             #pragma system_include
+   39                           #endif
+ 2965                           #define STIR_INTID    (0x1FFul)
+ 3061                           #endif    /* __IAR_SYSTEMS_ICC__ */
+ 3062                           
+ 3063                           /* Declarations common to compiler and
+                                 assembler  **************************/
+ 3064                           /*********************************************
+                                ******************************
+ 3065                            **
+ 3066                            ** NVIC
+ 3067                            **
+ 3068                            *********************************************
+                                ******************************/
+ 3069                           __IO_REG32_BIT(NVIC,              0xE000E004,_
+                                _READ       ,__nvic_bits);
+ 3070                           __IO_REG32_BIT(ACR,               0xE000E008,_
+                                _READ_WRITE ,__acr_bits);
+ 3071                           __IO_REG32_BIT(SYSTICKCSR,        0xE000E010,_
+                                _READ_WRITE ,__systickcsr_bits);
+ 3072                           __IO_REG32_BIT(SYSTICKRVR,        0xE000E014,_
+                                _READ_WRITE ,__systickrvr_bits);
+ 3073                           __IO_REG32_BIT(SYSTICKCVR,        0xE000E018,_
+                                _READ_WRITE ,__systickcvr_bits);
+ 3074                           __IO_REG32_BIT(SYSTICKCALVR,      0xE000E01C,_
+                                _READ       ,__systickcalvr_bits);
+ 3075                           __IO_REG32_BIT(SETENA0,           0xE000E100,_
+                                _READ_WRITE ,__setena0_bits);
+ 3076                           __IO_REG32_BIT(SETENA1,           0xE000E104,_
+                                _READ_WRITE ,__setena1_bits);
+ 3077                           __IO_REG32_BIT(CLRENA0,           0xE000E180,_
+                                _READ_WRITE ,__clrena0_bits);
+ 3078                           __IO_REG32_BIT(CLRENA1,           0xE000E184,_
+                                _READ_WRITE ,__clrena1_bits);
+ 3079                           __IO_REG32_BIT(SETPEND0,          0xE000E200,_
+                                _READ_WRITE ,__setpend0_bits);
+ 3080                           __IO_REG32_BIT(SETPEND1,          0xE000E204,_
+                                _READ_WRITE ,__setpend1_bits);
+ 3081                           __IO_REG32_BIT(CLRPEND0,          0xE000E280,_
+                                _READ_WRITE ,__clrpend0_bits);
+ 3082                           __IO_REG32_BIT(CLRPEND1,          0xE000E284,_
+                                _READ_WRITE ,__clrpend1_bits);
+ 3083                           __IO_REG32_BIT(ACTIVE0,           0xE000E300,_
+                                _READ       ,__active0_bits);
+ 3084                           __IO_REG32_BIT(ACTIVE1,           0xE000E304,_
+                                _READ       ,__active1_bits);
+ 3085                           __IO_REG32_BIT(IP0,               0xE000E400,_
+                                _READ_WRITE ,__pri0_bits);
+ 3086                           __IO_REG32_BIT(IP1,               0xE000E404,_
+                                _READ_WRITE ,__pri1_bits);
+ 3087                           __IO_REG32_BIT(IP2,               0xE000E408,_
+                                _READ_WRITE ,__pri2_bits);
+ 3088                           __IO_REG32_BIT(IP3,               0xE000E40C,_
+                                _READ_WRITE ,__pri3_bits);
+ 3089                           __IO_REG32_BIT(IP4,               0xE000E410,_
+                                _READ_WRITE ,__pri4_bits);
+ 3090                           __IO_REG32_BIT(IP5,               0xE000E414,_
+                                _READ_WRITE ,__pri5_bits);
+ 3091                           __IO_REG32_BIT(IP6,               0xE000E418,_
+                                _READ_WRITE ,__pri6_bits);
+ 3092                           __IO_REG32_BIT(IP7,               0xE000E41C,_
+                                _READ_WRITE ,__pri7_bits);
+ 3093                           __IO_REG32_BIT(IP8,               0xE000E420,_
+                                _READ_WRITE ,__pri8_bits);
+ 3094                           __IO_REG32_BIT(IP9,               0xE000E424,_
+                                _READ_WRITE ,__pri9_bits);
+ 3095                           __IO_REG32_BIT(IP10,              0xE000E428,_
+                                _READ_WRITE ,__pri10_bits);
+ 3096                           __IO_REG32_BIT(IP11,              0xE000E42C,_
+                                _READ_WRITE ,__pri11_bits);
+ 3097                           __IO_REG32_BIT(IP12,              0xE000E430,_
+                                _READ_WRITE ,__pri12_bits);
+ 3098                           __IO_REG32_BIT(IP13,              0xE000E434,_
+                                _READ_WRITE ,__pri13_bits);
+ 3099                           __IO_REG32_BIT(IP14,              0xE000E438,_
+                                _READ_WRITE ,__pri14_bits);
+ 3100                           __IO_REG32_BIT(IP15,              0xE000E43C,_
+                                _READ_WRITE ,__pri15_bits);
+ 3101                           __IO_REG32_BIT(CPUIDBR,           0xE000ED00,_
+                                _READ       ,__cpuidbr_bits);
+ 3102                           __IO_REG32_BIT(ICSR,              0xE000ED04,_
+                                _READ_WRITE ,__icsr_bits);
+ 3103                           __IO_REG32_BIT(VTOR,              0xE000ED08,_
+                                _READ_WRITE ,__vtor_bits);
+ 3104                           __IO_REG32_BIT(AIRCR,             0xE000ED0C,_
+                                _READ_WRITE ,__aircr_bits);
+ 3105                           __IO_REG32_BIT(SCR,               0xE000ED10,_
+                                _READ_WRITE ,__scr_bits);
+ 3106                           __IO_REG32_BIT(CCR,               0xE000ED14,_
+                                _READ_WRITE ,__ccr_bits);
+ 3107                           __IO_REG32_BIT(SHPR0,             0xE000ED18,_
+                                _READ_WRITE ,__pri1_bits);
+ 3108                           __IO_REG32_BIT(SHPR1,             0xE000ED1C,_
+                                _READ_WRITE ,__pri2_bits);
+ 3109                           __IO_REG32_BIT(SHPR2,             0xE000ED20,_
+                                _READ_WRITE ,__pri3_bits);
+ 3110                           __IO_REG32_BIT(SHCSR,             0xE000ED24,_
+                                _READ_WRITE ,__shcsr_bits);
+ 3111                           __IO_REG32_BIT(CFSR,              0xE000ED28,_
+                                _READ_WRITE ,__cfsr_bits);
+ 3112                           __IO_REG32_BIT(HFSR,              0xE000ED2C,_
+                                _READ_WRITE ,__hfsr_bits);
+ 3113                           __IO_REG32_BIT(DFSR,              0xE000ED30,_
+                                _READ_WRITE ,__dfsr_bits);
+ 3114                           __IO_REG32(    MMFAR,             0xE000ED34,_
+                                _READ_WRITE);
+ 3115                           __IO_REG32(    BFAR,              0xE000ED38,_
+                                _READ_WRITE);
+ 3116                           __IO_REG32(    AFSR,              0xE000ED3C,_
+                                _READ      );
+ 3117                           __IO_REG32(    STIR,              0xE000EF00,_
+                                _WRITE     );
+ 3118                           
+ 3119                           /*********************************************
+                                ******************************
+ 3120                            **
+ 3121                            ** DBG
+ 3122                            **
+ 3123                            *********************************************
+                                ******************************/
+ 3124                           __IO_REG32_BIT(DBGMCU_IDCODE,     0xE0042000,_
+                                _READ       ,__dbgmcu_idcode_bits);
+ 3125                           __IO_REG32_BIT(DBGMCU_CR,         0xE0042004,_
+                                _READ_WRITE ,__dbgmcu_cr_bits);
+ 3126                           
+ 3127                           /*********************************************
+                                ******************************
+ 3128                            **
+ 3129                            ** PWR
+ 3130                            **
+ 3131                            *********************************************
+                                ******************************/
+ 3132                           __IO_REG32_BIT(PWR_CR,            0x40007000,_
+                                _READ_WRITE ,__pwr_cr_bits);
+ 3133                           __IO_REG32_BIT(PWR_CSR,           0x40007004,_
+                                _READ_WRITE ,__pwr_csr_bits);
+ 3134                           
+ 3135                           /*********************************************
+                                ******************************
+ 3136                            **
+ 3137                            ** RCC
+ 3138                            **
+ 3139                            *********************************************
+                                ******************************/
+ 3140                           __IO_REG32_BIT(RCC_CR,            0x40021000,_
+                                _READ_WRITE ,__rcc_cr_bits);
+ 3141                           __IO_REG32_BIT(RCC_CFGR,          0x40021004,_
+                                _READ_WRITE ,__rcc_cfgr_bits);
+ 3142                           __IO_REG32_BIT(RCC_CIR,           0x40021008,_
+                                _READ_WRITE ,__rcc_cir_bits);
+ 3143                           __IO_REG32_BIT(RCC_APB2RSTR,      0x4002100C,_
+                                _READ_WRITE ,__rcc_apb2rstr_bits);
+ 3144                           __IO_REG32_BIT(RCC_APB1RSTR,      0x40021010,_
+                                _READ_WRITE ,__rcc_apb1rstr_bits);
+ 3145                           __IO_REG32_BIT(RCC_AHBENR,        0x40021014,_
+                                _READ_WRITE ,__rcc_ahbenr_bits);
+ 3146                           __IO_REG32_BIT(RCC_APB2ENR,       0x40021018,_
+                                _READ_WRITE ,__rcc_apb2enr_bits);
+ 3147                           __IO_REG32_BIT(RCC_APB1ENR,       0x4002101C,_
+                                _READ_WRITE ,__rcc_apb1enr_bits);
+ 3148                           __IO_REG32_BIT(RCC_BDCR,          0x40021020,_
+                                _READ_WRITE ,__rcc_bdcr_bits);
+ 3149                           __IO_REG32_BIT(RCC_CSR,           0x40021024,_
+                                _READ_WRITE ,__rcc_csr_bits);
+ 3150                           __IO_REG32_BIT(RCC_CFGR2,         0x4002102C,_
+                                _READ_WRITE ,__rcc_cfgr2_bits);
+ 3151                           
+ 3152                           /*********************************************
+                                ******************************
+ 3153                            **
+ 3154                            ** GPIOA
+ 3155                            **
+ 3156                            *********************************************
+                                ******************************/
+ 3157                           __IO_REG32_BIT(GPIOA_CRL,         0x40010800,_
+                                _READ_WRITE ,__gpio_crl_bits);
+ 3158                           __IO_REG32_BIT(GPIOA_CRH,         0x40010804,_
+                                _READ_WRITE ,__gpio_crh_bits);
+ 3159                           __IO_REG32_BIT(GPIOA_IDR,         0x40010808,_
+                                _READ       ,__gpio_idr_bits);
+ 3160                           __IO_REG32_BIT(GPIOA_ODR,         0x4001080C,_
+                                _READ_WRITE ,__gpio_odr_bits);
+ 3161                           __IO_REG32_BIT(GPIOA_BSRR,        0x40010810,_
+                                _WRITE      ,__gpio_bsrr_bits);
+ 3162                           __IO_REG32_BIT(GPIOA_BRR,         0x40010814,_
+                                _WRITE      ,__gpio_brr_bits);
+ 3163                           __IO_REG32_BIT(GPIOA_LCKR,        0x40010818,_
+                                _READ_WRITE ,__gpio_lckr_bits);
+ 3164                           
+ 3165                           /*********************************************
+                                ******************************
+ 3166                            **
+ 3167                            ** GPIOB
+ 3168                            **
+ 3169                            *********************************************
+                                ******************************/
+ 3170                           __IO_REG32_BIT(GPIOB_CRL,         0x40010C00,_
+                                _READ_WRITE ,__gpio_crl_bits);
+ 3171                           __IO_REG32_BIT(GPIOB_CRH,         0x40010C04,_
+                                _READ_WRITE ,__gpio_crh_bits);
+ 3172                           __IO_REG32_BIT(GPIOB_IDR,         0x40010C08,_
+                                _READ       ,__gpio_idr_bits);
+ 3173                           __IO_REG32_BIT(GPIOB_ODR,         0x40010C0C,_
+                                _READ_WRITE ,__gpio_odr_bits);
+ 3174                           __IO_REG32_BIT(GPIOB_BSRR,        0x40010C10,_
+                                _WRITE      ,__gpio_bsrr_bits);
+ 3175                           __IO_REG32_BIT(GPIOB_BRR,         0x40010C14,_
+                                _WRITE      ,__gpio_brr_bits);
+ 3176                           __IO_REG32_BIT(GPIOB_LCKR,        0x40010C18,_
+                                _READ_WRITE ,__gpio_lckr_bits);
+ 3177                           
+ 3178                           /*********************************************
+                                ******************************
+ 3179                            **
+ 3180                            ** GPIOC
+ 3181                            **
+ 3182                            *********************************************
+                                ******************************/
+ 3183                           __IO_REG32_BIT(GPIOC_CRL,         0x40011000,_
+                                _READ_WRITE ,__gpio_crl_bits);
+ 3184                           __IO_REG32_BIT(GPIOC_CRH,         0x40011004,_
+                                _READ_WRITE ,__gpio_crh_bits);
+ 3185                           __IO_REG32_BIT(GPIOC_IDR,         0x40011008,_
+                                _READ       ,__gpio_idr_bits);
+ 3186                           __IO_REG32_BIT(GPIOC_ODR,         0x4001100C,_
+                                _READ_WRITE ,__gpio_odr_bits);
+ 3187                           __IO_REG32_BIT(GPIOC_BSRR,        0x40011010,_
+                                _WRITE      ,__gpio_bsrr_bits);
+ 3188                           __IO_REG32_BIT(GPIOC_BRR,         0x40011014,_
+                                _WRITE      ,__gpio_brr_bits);
+ 3189                           __IO_REG32_BIT(GPIOC_LCKR,        0x40011018,_
+                                _READ_WRITE ,__gpio_lckr_bits);
+ 3190                           
+ 3191                           /*********************************************
+                                ******************************
+ 3192                            **
+ 3193                            ** GPIOD
+ 3194                            **
+ 3195                            *********************************************
+                                ******************************/
+ 3196                           __IO_REG32_BIT(GPIOD_CRL,         0x40011400,_
+                                _READ_WRITE ,__gpio_crl_bits);
+ 3197                           __IO_REG32_BIT(GPIOD_CRH,         0x40011404,_
+                                _READ_WRITE ,__gpio_crh_bits);
+ 3198                           __IO_REG32_BIT(GPIOD_IDR,         0x40011408,_
+                                _READ       ,__gpio_idr_bits);
+ 3199                           __IO_REG32_BIT(GPIOD_ODR,         0x4001140C,_
+                                _READ_WRITE ,__gpio_odr_bits);
+ 3200                           __IO_REG32_BIT(GPIOD_BSRR,        0x40011410,_
+                                _WRITE      ,__gpio_bsrr_bits);
+ 3201                           __IO_REG32_BIT(GPIOD_BRR,         0x40011414,_
+                                _WRITE      ,__gpio_brr_bits);
+ 3202                           __IO_REG32_BIT(GPIOD_LCKR,        0x40011418,_
+                                _READ_WRITE ,__gpio_lckr_bits);
+ 3203                           
+ 3204                           /*********************************************
+                                ******************************
+ 3205                            **
+ 3206                            ** GPIOE
+ 3207                            **
+ 3208                            *********************************************
+                                ******************************/
+ 3209                           __IO_REG32_BIT(GPIOE_CRL,         0x40011800,_
+                                _READ_WRITE ,__gpio_crl_bits);
+ 3210                           __IO_REG32_BIT(GPIOE_CRH,         0x40011804,_
+                                _READ_WRITE ,__gpio_crh_bits);
+ 3211                           __IO_REG32_BIT(GPIOE_IDR,         0x40011808,_
+                                _READ       ,__gpio_idr_bits);
+ 3212                           __IO_REG32_BIT(GPIOE_ODR,         0x4001180C,_
+                                _READ_WRITE ,__gpio_odr_bits);
+ 3213                           __IO_REG32_BIT(GPIOE_BSRR,        0x40011810,_
+                                _WRITE      ,__gpio_bsrr_bits);
+ 3214                           __IO_REG32_BIT(GPIOE_BRR,         0x40011814,_
+                                _WRITE      ,__gpio_brr_bits);
+ 3215                           __IO_REG32_BIT(GPIOE_LCKR,        0x40011818,_
+                                _READ_WRITE ,__gpio_lckr_bits);
+ 3216                           
+ 3217                           /*********************************************
+                                ******************************
+ 3218                            **
+ 3219                            ** AFIO
+ 3220                            **
+ 3221                            *********************************************
+                                ******************************/
+ 3222                           __IO_REG32_BIT(AFIO_EVCR,         0x40010000,_
+                                _READ_WRITE ,__afio_evcr_bits);
+ 3223                           __IO_REG32_BIT(AFIO_MAPR,         0x40010004,_
+                                _READ_WRITE ,__afio_mapr_bits);
+ 3224                           __IO_REG32_BIT(AFIO_EXTICR1,      0x40010008,_
+                                _READ_WRITE ,__afio_exticr1_bits);
+ 3225                           __IO_REG32_BIT(AFIO_EXTICR2,      0x4001000C,_
+                                _READ_WRITE ,__afio_exticr2_bits);
+ 3226                           __IO_REG32_BIT(AFIO_EXTICR3,      0x40010010,_
+                                _READ_WRITE ,__afio_exticr3_bits);
+ 3227                           __IO_REG32_BIT(AFIO_EXTICR4,      0x40010014,_
+                                _READ_WRITE ,__afio_exticr4_bits);
+ 3228                           __IO_REG32_BIT(AFIO_MAPR2,        0x4001001C,_
+                                _READ_WRITE ,__afio_mapr2_bits);
+ 3229                           
+ 3230                           /*********************************************
+                                ******************************
+ 3231                            **
+ 3232                            ** EXTI
+ 3233                            **
+ 3234                            *********************************************
+                                ******************************/
+ 3235                           __IO_REG32_BIT(EXTI_IMR,          0x40010400,_
+                                _READ_WRITE ,__exti_imr_bits);
+ 3236                           __IO_REG32_BIT(EXTI_EMR,          0x40010404,_
+                                _READ_WRITE ,__exti_emr_bits);
+ 3237                           __IO_REG32_BIT(EXTI_RTSR,         0x40010408,_
+                                _READ_WRITE ,__exti_rtsr_bits);
+ 3238                           __IO_REG32_BIT(EXTI_FTSR,         0x4001040C,_
+                                _READ_WRITE ,__exti_ftsr_bits);
+ 3239                           __IO_REG32_BIT(EXTI_SWIER,        0x40010410,_
+                                _READ_WRITE ,__exti_swier_bits);
+ 3240                           __IO_REG32_BIT(EXTI_PR,           0x40010414,_
+                                _READ_WRITE ,__exti_pr_bits);
+ 3241                           
+ 3242                           /*********************************************
+                                ******************************
+ 3243                            **
+ 3244                            ** DMA
+ 3245                            **
+ 3246                            *********************************************
+                                ******************************/
+ 3247                           __IO_REG32_BIT(DMA_ISR,           0x40020000,_
+                                _READ       ,__dma_isr_bits);
+ 3248                           __IO_REG32_BIT(DMA_IFCR,          0x40020004,_
+                                _WRITE      ,__dma_ifcr_bits);
+ 3249                           __IO_REG32_BIT(DMA_CCR1,          0x40020008,_
+                                _READ_WRITE ,__dma_ccr_bits);
+ 3250                           __IO_REG32_BIT(DMA_CNDTR1,        0x4002000C,_
+                                _READ_WRITE ,__dma_cndtr_bits);
+ 3251                           __IO_REG32(    DMA_CPAR1,         0x40020010,_
+                                _READ_WRITE );
+ 3252                           __IO_REG32(    DMA_CMAR1,         0x40020014,_
+                                _READ_WRITE );
+ 3253                           __IO_REG32_BIT(DMA_CCR2,          0x4002001C,_
+                                _READ_WRITE ,__dma_ccr_bits);
+ 3254                           __IO_REG32_BIT(DMA_CNDTR2,        0x40020020,_
+                                _READ_WRITE ,__dma_cndtr_bits);
+ 3255                           __IO_REG32(    DMA_CPAR2,         0x40020024,_
+                                _READ_WRITE );
+ 3256                           __IO_REG32(    DMA_CMAR2,         0x40020028,_
+                                _READ_WRITE );
+ 3257                           __IO_REG32_BIT(DMA_CCR3,          0x40020030,_
+                                _READ_WRITE ,__dma_ccr_bits);
+ 3258                           __IO_REG32_BIT(DMA_CNDTR3,        0x40020034,_
+                                _READ_WRITE ,__dma_cndtr_bits);
+ 3259                           __IO_REG32(    DMA_CPAR3,         0x40020038,_
+                                _READ_WRITE );
+ 3260                           __IO_REG32(    DMA_CMAR3,         0x4002003C,_
+                                _READ_WRITE );
+ 3261                           __IO_REG32_BIT(DMA_CCR4,          0x40020044,_
+                                _READ_WRITE ,__dma_ccr_bits);
+ 3262                           __IO_REG32_BIT(DMA_CNDTR4,        0x40020048,_
+                                _READ_WRITE ,__dma_cndtr_bits);
+ 3263                           __IO_REG32(    DMA_CPAR4,         0x4002004C,_
+                                _READ_WRITE );
+ 3264                           __IO_REG32(    DMA_CMAR4,         0x40020050,_
+                                _READ_WRITE );
+ 3265                           __IO_REG32_BIT(DMA_CCR5,          0x40020058,_
+                                _READ_WRITE ,__dma_ccr_bits);
+ 3266                           __IO_REG32_BIT(DMA_CNDTR5,        0x4002005C,_
+                                _READ_WRITE ,__dma_cndtr_bits);
+ 3267                           __IO_REG32(    DMA_CPAR5,         0x40020060,_
+                                _READ_WRITE );
+ 3268                           __IO_REG32(    DMA_CMAR5,         0x40020064,_
+                                _READ_WRITE );
+ 3269                           __IO_REG32_BIT(DMA_CCR6,          0x4002006C,_
+                                _READ_WRITE ,__dma_ccr_bits);
+ 3270                           __IO_REG32_BIT(DMA_CNDTR6,        0x40020070,_
+                                _READ_WRITE ,__dma_cndtr_bits);
+ 3271                           __IO_REG32(    DMA_CPAR6,         0x40020074,_
+                                _READ_WRITE );
+ 3272                           __IO_REG32(    DMA_CMAR6,         0x40020078,_
+                                _READ_WRITE );
+ 3273                           __IO_REG32_BIT(DMA_CCR7,          0x40020080,_
+                                _READ_WRITE ,__dma_ccr_bits);
+ 3274                           __IO_REG32_BIT(DMA_CNDTR7,        0x40020084,_
+                                _READ_WRITE ,__dma_cndtr_bits);
+ 3275                           __IO_REG32(    DMA_CPAR7,         0x40020088,_
+                                _READ_WRITE );
+ 3276                           __IO_REG32(    DMA_CMAR7,         0x4002008C,_
+                                _READ_WRITE );
+ 3277                           
+ 3278                           /*********************************************
+                                ******************************
+ 3279                            **
+ 3280                            ** RTC
+ 3281                            **
+ 3282                            *********************************************
+                                ******************************/
+ 3283                           __IO_REG16_BIT(RTC_CRH,           0x40002800,_
+                                _READ_WRITE ,__rtccrh_bits);
+ 3284                           __IO_REG16_BIT(RTC_CRL,           0x40002804,_
+                                _READ_WRITE ,__rtccrl_bits);
+ 3285                           __IO_REG16_BIT(RTC_PRLH,          0x40002808,_
+                                _WRITE      ,__rtcprlh_bits);
+ 3286                           __IO_REG16(    RTC_PRLL,          0x4000280C,_
+                                _WRITE      );
+ 3287                           __IO_REG16_BIT(RTC_DIVH,          0x40002810,_
+                                _READ       ,__rtcdivh_bits);
+ 3288                           __IO_REG16(    RTC_DIVL,          0x40002814,_
+                                _READ       );
+ 3289                           __IO_REG16(    RTC_CNTH,          0x40002818,_
+                                _READ_WRITE );
+ 3290                           __IO_REG16(    RTC_CNTL,          0x4000281C,_
+                                _READ_WRITE );
+ 3291                           __IO_REG16(    RTC_ALRH,          0x40002820,_
+                                _WRITE      );
+ 3292                           __IO_REG16(    RTC_ALRL,          0x40002824,_
+                                _WRITE      );
+ 3293                           
+ 3294                           /*********************************************
+                                ******************************
+ 3295                            **
+ 3296                            ** BKP
+ 3297                            **
+ 3298                            *********************************************
+                                ******************************/
+ 3299                           __IO_REG16(    BKP_DR1,           0x40006C04,_
+                                _READ_WRITE );
+ 3300                           __IO_REG16(    BKP_DR2,           0x40006C08,_
+                                _READ_WRITE );
+ 3301                           __IO_REG16(    BKP_DR3,           0x40006C0C,_
+                                _READ_WRITE );
+ 3302                           __IO_REG16(    BKP_DR4,           0x40006C10,_
+                                _READ_WRITE );
+ 3303                           __IO_REG16(    BKP_DR5,           0x40006C14,_
+                                _READ_WRITE );
+ 3304                           __IO_REG16(    BKP_DR6,           0x40006C18,_
+                                _READ_WRITE );
+ 3305                           __IO_REG16(    BKP_DR7,           0x40006C1C,_
+                                _READ_WRITE );
+ 3306                           __IO_REG16(    BKP_DR8,           0x40006C20,_
+                                _READ_WRITE );
+ 3307                           __IO_REG16(    BKP_DR9,           0x40006C24,_
+                                _READ_WRITE );
+ 3308                           __IO_REG16(    BKP_DR10,          0x40006C28,_
+                                _READ_WRITE );
+ 3309                           __IO_REG16_BIT(BKP_RTCCR,         0x40006C2C,_
+                                _READ_WRITE ,__bkp_rtccr_bits);
+ 3310                           __IO_REG16_BIT(BKP_CR,            0x40006C30,_
+                                _READ_WRITE ,__bkp_cr_bits);
+ 3311                           __IO_REG16_BIT(BKP_CSR,           0x40006C34,_
+                                _READ_WRITE ,__bkp_csr_bits);
+ 3312                           
+ 3313                           /*********************************************
+                                ******************************
+ 3314                            **
+ 3315                            ** IWDG
+ 3316                            **
+ 3317                            *********************************************
+                                ******************************/
+ 3318                           __IO_REG16(    IWDG_KR,           0x40003000,_
+                                _WRITE      );
+ 3319                           __IO_REG16_BIT(IWDG_PR,           0x40003004,_
+                                _READ_WRITE ,__iwdg_pr_bits);
+ 3320                           __IO_REG16_BIT(IWDG_RLR,          0x40003008,_
+                                _READ_WRITE ,__iwdg_rlr_bits);
+ 3321                           __IO_REG16_BIT(IWDG_SR,           0x4000300C,_
+                                _READ       ,__iwdg_sr_bits);
+ 3322                           
+ 3323                           /*********************************************
+                                ******************************
+ 3324                            **
+ 3325                            ** WWDG
+ 3326                            **
+ 3327                            *********************************************
+                                ******************************/
+ 3328                           __IO_REG16_BIT(WWDG_CR,           0x40002C00,_
+                                _READ_WRITE ,__wwdg_cr_bits);
+ 3329                           __IO_REG16_BIT(WWDG_CFR,          0x40002C04,_
+                                _READ_WRITE ,__wwdg_cfr_bits);
+ 3330                           __IO_REG16_BIT(WWDG_SR,           0x40002C08,_
+                                _READ_WRITE ,__wwdg_sr_bits);
+ 3331                           
+ 3332                           /*********************************************
+                                ******************************
+ 3333                            **
+ 3334                            ** TIM1
+ 3335                            **
+ 3336                            *********************************************
+                                ******************************/
+ 3337                           __IO_REG32_BIT(TIM1_CR1,          0x40012C00,_
+                                _READ_WRITE ,__tim1_cr1_bits);
+ 3338                           __IO_REG32_BIT(TIM1_CR2,          0x40012C04,_
+                                _READ_WRITE ,__tim1_cr2_bits);
+ 3339                           __IO_REG32_BIT(TIM1_SMCR,         0x40012C08,_
+                                _READ_WRITE ,__tim1_smcr_bits);
+ 3340                           __IO_REG32_BIT(TIM1_DIER,         0x40012C0C,_
+                                _READ_WRITE ,__tim1_dier_bits);
+ 3341                           __IO_REG32_BIT(TIM1_SR,           0x40012C10,_
+                                _READ_WRITE ,__tim1_sr_bits);
+ 3342                           __IO_REG32_BIT(TIM1_EGR,          0x40012C14,_
+                                _READ_WRITE ,__tim1_egr_bits);
+ 3343                           __IO_REG32_BIT(TIM1_CCMR1,        0x40012C18,_
+                                _READ_WRITE ,__tim1_ccmr1_bits);
+ 3344                           #define TIM1_OCMR1      TIM1_CCMR1
+ 3345                           #define TIM1_OCMR1_bit  TIM1_CCMR1_bit
+ 3346                           __IO_REG32_BIT(TIM1_CCMR2,        0x40012C1C,_
+                                _READ_WRITE ,__tim1_ccmr2_bits);
+ 3347                           #define TIM1_OCMR2      TIM1_CCMR2
+ 3348                           #define TIM1_OCMR2_bit  TIM1_CCMR2_bit
+ 3349                           __IO_REG32_BIT(TIM1_CCER,         0x40012C20,_
+                                _READ_WRITE ,__tim1_ccer_bits);
+ 3350                           __IO_REG32_BIT(TIM1_CNT,          0x40012C24,_
+                                _READ_WRITE ,__tim1_cnt_bits);
+ 3351                           __IO_REG32_BIT(TIM1_PSC,          0x40012C28,_
+                                _READ_WRITE ,__tim1_psc_bits);
+ 3352                           __IO_REG32_BIT(TIM1_ARR,          0x40012C2C,_
+                                _READ_WRITE ,__tim1_arr_bits);
+ 3353                           __IO_REG32_BIT(TIM1_RCR,          0x40012C30,_
+                                _READ_WRITE ,__tim1_rcr_bits);
+ 3354                           __IO_REG32_BIT(TIM1_CCR1,         0x40012C34,_
+                                _READ_WRITE ,__tim1_ccr_bits);
+ 3355                           __IO_REG32_BIT(TIM1_CCR2,         0x40012C38,_
+                                _READ_WRITE ,__tim1_ccr_bits);
+ 3356                           __IO_REG32_BIT(TIM1_CCR3,         0x40012C3C,_
+                                _READ_WRITE ,__tim1_ccr_bits);
+ 3357                           __IO_REG32_BIT(TIM1_CCR4,         0x40012C40,_
+                                _READ_WRITE ,__tim1_ccr_bits);
+ 3358                           __IO_REG32_BIT(TIM1_BDTR,         0x40012C44,_
+                                _READ_WRITE ,__tim1_bdtr_bits);
+ 3359                           __IO_REG32_BIT(TIM1_DCR,          0x40012C48,_
+                                _READ_WRITE ,__tim1_dcr_bits);
+ 3360                           __IO_REG32_BIT(TIM1_DMAR,         0x40012C4C,_
+                                _READ_WRITE ,__tim1_dmar_bits);
+ 3361                           
+ 3362                           /*********************************************
+                                ******************************
+ 3363                            **
+ 3364                            ** TIM2
+ 3365                            **
+ 3366                            *********************************************
+                                ******************************/
+ 3367                           __IO_REG32_BIT(TIM2_CR1,          0x40000000,_
+                                _READ_WRITE ,__tim_cr1_bits);
+ 3368                           __IO_REG32_BIT(TIM2_CR2,          0x40000004,_
+                                _READ_WRITE ,__tim_cr2_bits);
+ 3369                           __IO_REG32_BIT(TIM2_SMCR,         0x40000008,_
+                                _READ_WRITE ,__tim_smcr_bits);
+ 3370                           __IO_REG32_BIT(TIM2_DIER,         0x4000000C,_
+                                _READ_WRITE ,__tim_dier_bits);
+ 3371                           __IO_REG32_BIT(TIM2_SR,           0x40000010,_
+                                _READ_WRITE ,__tim_sr_bits);
+ 3372                           __IO_REG32_BIT(TIM2_EGR,          0x40000014,_
+                                _READ_WRITE ,__tim_egr_bits);
+ 3373                           __IO_REG32_BIT(TIM2_CCMR1,        0x40000018,_
+                                _READ_WRITE ,__tim_ccmr1_bits);
+ 3374                           #define TIM2_OCMR1      TIM2_CCMR1
+ 3375                           #define TIM2_OCMR1_bit  TIM2_CCMR1_bit
+ 3376                           __IO_REG32_BIT(TIM2_CCMR2,        0x4000001C,_
+                                _READ_WRITE ,__tim_ccmr2_bits);
+ 3377                           #define TIM2_OCMR2      TIM2_CCMR2
+ 3378                           #define TIM2_OCMR2_bit  TIM2_CCMR2_bit
+ 3379                           __IO_REG32_BIT(TIM2_CCER,         0x40000020,_
+                                _READ_WRITE ,__tim_ccer_bits);
+ 3380                           __IO_REG32(    TIM2_CNT,          0x40000024,_
+                                _READ_WRITE );
+ 3381                           __IO_REG32_BIT(TIM2_PSC,          0x40000028,_
+                                _READ_WRITE ,__tim_psc_bits);
+ 3382                           __IO_REG32(    TIM2_ARR,          0x4000002C,_
+                                _READ_WRITE );
+ 3383                           __IO_REG32(    TIM2_CCR1,         0x40000034,_
+                                _READ_WRITE );
+ 3384                           __IO_REG32(    TIM2_CCR2,         0x40000038,_
+                                _READ_WRITE );
+ 3385                           __IO_REG32(    TIM2_CCR3,         0x4000003C,_
+                                _READ_WRITE );
+ 3386                           __IO_REG32(    TIM2_CCR4,         0x40000040,_
+                                _READ_WRITE );
+ 3387                           __IO_REG32_BIT(TIM2_DCR,          0x40000048,_
+                                _READ_WRITE ,__tim_dcr_bits);
+ 3388                           __IO_REG32_BIT(TIM2_DMAR,         0x4000004C,_
+                                _READ_WRITE ,__tim_dmar_bits);
+ 3389                           __IO_REG32_BIT(TIM2_OR,           0x40000050,_
+                                _READ_WRITE ,__tim2_or_bits);
+ 3390                           
+ 3391                           /*********************************************
+                                ******************************
+ 3392                            **
+ 3393                            ** TIM3
+ 3394                            **
+ 3395                            *********************************************
+                                ******************************/
+ 3396                           __IO_REG32_BIT(TIM3_CR1,          0x40000400,_
+                                _READ_WRITE ,__tim_cr1_bits);
+ 3397                           __IO_REG32_BIT(TIM3_CR2,          0x40000404,_
+                                _READ_WRITE ,__tim_cr2_bits);
+ 3398                           __IO_REG32_BIT(TIM3_SMCR,         0x40000408,_
+                                _READ_WRITE ,__tim_smcr_bits);
+ 3399                           __IO_REG32_BIT(TIM3_DIER,         0x4000040C,_
+                                _READ_WRITE ,__tim_dier_bits);
+ 3400                           __IO_REG32_BIT(TIM3_SR,           0x40000410,_
+                                _READ_WRITE ,__tim_sr_bits);
+ 3401                           __IO_REG32_BIT(TIM3_EGR,          0x40000414,_
+                                _READ_WRITE ,__tim_egr_bits);
+ 3402                           __IO_REG32_BIT(TIM3_CCMR1,        0x40000418,_
+                                _READ_WRITE ,__tim_ccmr1_bits);
+ 3403                           #define TIM3_OCMR1      TIM3_CCMR1
+ 3404                           #define TIM3_OCMR1_bit  TIM3_CCMR1_bit
+ 3405                           __IO_REG32_BIT(TIM3_CCMR2,        0x4000041C,_
+                                _READ_WRITE ,__tim_ccmr2_bits);
+ 3406                           #define TIM3_OCMR2      TIM3_CCMR2
+ 3407                           #define TIM3_OCMR2_bit  TIM3_CCMR2_bit
+ 3408                           __IO_REG32_BIT(TIM3_CCER,         0x40000420,_
+                                _READ_WRITE ,__tim_ccer_bits);
+ 3409                           __IO_REG32_BIT(TIM3_CNT,          0x40000424,_
+                                _READ_WRITE ,__tim_cnt_bits);
+ 3410                           __IO_REG32_BIT(TIM3_PSC,          0x40000428,_
+                                _READ_WRITE ,__tim_psc_bits);
+ 3411                           __IO_REG32_BIT(TIM3_ARR,          0x4000042C,_
+                                _READ_WRITE ,__tim_arr_bits);
+ 3412                           __IO_REG32_BIT(TIM3_CCR1,         0x40000434,_
+                                _READ_WRITE ,__tim_ccr_bits);
+ 3413                           __IO_REG32_BIT(TIM3_CCR2,         0x40000438,_
+                                _READ_WRITE ,__tim_ccr_bits);
+ 3414                           __IO_REG32_BIT(TIM3_CCR3,         0x4000043C,_
+                                _READ_WRITE ,__tim_ccr_bits);
+ 3415                           __IO_REG32_BIT(TIM3_CCR4,         0x40000440,_
+                                _READ_WRITE ,__tim_ccr_bits);
+ 3416                           __IO_REG32_BIT(TIM3_DCR,          0x40000448,_
+                                _READ_WRITE ,__tim_dcr_bits);
+ 3417                           __IO_REG32_BIT(TIM3_DMAR,         0x4000044C,_
+                                _READ_WRITE ,__tim_dmar_bits);
+ 3418                           
+ 3419                           /*********************************************
+                                ******************************
+ 3420                            **
+ 3421                            ** TIM4
+ 3422                            **
+ 3423                            *********************************************
+                                ******************************/
+ 3424                           __IO_REG32_BIT(TIM4_CR1,          0x40000800,_
+                                _READ_WRITE ,__tim_cr1_bits);
+ 3425                           __IO_REG32_BIT(TIM4_CR2,          0x40000804,_
+                                _READ_WRITE ,__tim_cr2_bits);
+ 3426                           __IO_REG32_BIT(TIM4_SMCR,         0x40000808,_
+                                _READ_WRITE ,__tim_smcr_bits);
+ 3427                           __IO_REG32_BIT(TIM4_DIER,         0x4000080C,_
+                                _READ_WRITE ,__tim_dier_bits);
+ 3428                           __IO_REG32_BIT(TIM4_SR,           0x40000810,_
+                                _READ_WRITE ,__tim_sr_bits);
+ 3429                           __IO_REG32_BIT(TIM4_EGR,          0x40000814,_
+                                _READ_WRITE ,__tim_egr_bits);
+ 3430                           __IO_REG32_BIT(TIM4_CCMR1,        0x40000818,_
+                                _READ_WRITE ,__tim_ccmr1_bits);
+ 3431                           #define TIM4_OCMR1      TIM4_CCMR1
+ 3432                           #define TIM4_OCMR1_bit  TIM4_CCMR1_bit
+ 3433                           __IO_REG32_BIT(TIM4_CCMR2,        0x4000081C,_
+                                _READ_WRITE ,__tim_ccmr2_bits);
+ 3434                           #define TIM4_OCMR2      TIM4_CCMR2
+ 3435                           #define TIM4_OCMR2_bit  TIM4_CCMR2_bit
+ 3436                           __IO_REG32_BIT(TIM4_CCER,         0x40000820,_
+                                _READ_WRITE ,__tim_ccer_bits);
+ 3437                           __IO_REG32_BIT(TIM4_CNT,          0x40000824,_
+                                _READ_WRITE ,__tim_cnt_bits);
+ 3438                           __IO_REG32_BIT(TIM4_PSC,          0x40000828,_
+                                _READ_WRITE ,__tim_psc_bits);
+ 3439                           __IO_REG32_BIT(TIM4_ARR,          0x4000082C,_
+                                _READ_WRITE ,__tim_arr_bits);
+ 3440                           __IO_REG32_BIT(TIM4_CCR1,         0x40000834,_
+                                _READ_WRITE ,__tim_ccr_bits);
+ 3441                           __IO_REG32_BIT(TIM4_CCR2,         0x40000838,_
+                                _READ_WRITE ,__tim_ccr_bits);
+ 3442                           __IO_REG32_BIT(TIM4_CCR3,         0x4000083C,_
+                                _READ_WRITE ,__tim_ccr_bits);
+ 3443                           __IO_REG32_BIT(TIM4_CCR4,         0x40000840,_
+                                _READ_WRITE ,__tim_ccr_bits);
+ 3444                           __IO_REG32_BIT(TIM4_DCR,          0x40000848,_
+                                _READ_WRITE ,__tim_dcr_bits);
+ 3445                           __IO_REG32_BIT(TIM4_DMAR,         0x4000084C,_
+                                _READ_WRITE ,__tim_dmar_bits);
+ 3446                           
+ 3447                           /*********************************************
+                                ******************************
+ 3448                            **
+ 3449                            ** TIM15
+ 3450                            **
+ 3451                            *********************************************
+                                ******************************/
+ 3452                           __IO_REG32_BIT(TIM15_CR1,         0x40014000,_
+                                _READ_WRITE ,__tim15_cr1_bits);
+ 3453                           __IO_REG32_BIT(TIM15_CR2,         0x40014004,_
+                                _READ_WRITE ,__tim15_cr2_bits);
+ 3454                           __IO_REG32_BIT(TIM15_SMCR,        0x40014008,_
+                                _READ_WRITE ,__tim15_smcr_bits);
+ 3455                           __IO_REG32_BIT(TIM15_DIER,        0x4001400C,_
+                                _READ_WRITE ,__tim15_dier_bits);
+ 3456                           __IO_REG32_BIT(TIM15_SR,          0x40014010,_
+                                _READ_WRITE ,__tim15_sr_bits);
+ 3457                           __IO_REG32_BIT(TIM15_EGR,         0x40014014,_
+                                _READ_WRITE ,__tim15_egr_bits);
+ 3458                           __IO_REG32_BIT(TIM15_CCMR1,       0x40014018,_
+                                _READ_WRITE ,__tim15_ccmr1_bits);
+ 3459                           #define TIM15_OCMR1      TIM15_CCMR1
+ 3460                           #define TIM15_OCMR1_bit  TIM15_CCMR1_bit
+ 3461                           __IO_REG32_BIT(TIM15_CCER,        0x40014020,_
+                                _READ_WRITE ,__tim15_ccer_bits);
+ 3462                           __IO_REG32_BIT(TIM15_CNT,         0x40014024,_
+                                _READ_WRITE ,__tim15_cnt_bits);
+ 3463                           __IO_REG32_BIT(TIM15_PSC,         0x40014028,_
+                                _READ_WRITE ,__tim15_psc_bits);
+ 3464                           __IO_REG32_BIT(TIM15_ARR,         0x4001402C,_
+                                _READ_WRITE ,__tim15_arr_bits);
+ 3465                           __IO_REG32_BIT(TIM15_RCR,         0x40014030,_
+                                _READ_WRITE ,__tim15_rcr_bits);
+ 3466                           __IO_REG32_BIT(TIM15_CCR1,        0x40014034,_
+                                _READ_WRITE ,__tim15_ccr_bits);
+ 3467                           __IO_REG32_BIT(TIM15_CCR2,        0x40014038,_
+                                _READ_WRITE ,__tim15_ccr_bits);
+ 3468                           __IO_REG32_BIT(TIM15_BDTR,        0x40014044,_
+                                _READ_WRITE ,__tim15_bdtr_bits);
+ 3469                           __IO_REG32_BIT(TIM15_DCR,         0x40014048,_
+                                _READ_WRITE ,__tim15_dcr_bits);
+ 3470                           __IO_REG32_BIT(TIM15_DMAR,        0x4001404C,_
+                                _READ_WRITE ,__tim15_dmar_bits);
+ 3471                           
+ 3472                           /*********************************************
+                                ******************************
+ 3473                            **
+ 3474                            ** TIM16
+ 3475                            **
+ 3476                            *********************************************
+                                ******************************/
+ 3477                           __IO_REG32_BIT(TIM16_CR1,         0x40014400,_
+                                _READ_WRITE ,__tim16_cr1_bits);
+ 3478                           __IO_REG32_BIT(TIM16_CR2,         0x40014404,_
+                                _READ_WRITE ,__tim16_cr2_bits);
+ 3479                           __IO_REG32_BIT(TIM16_DIER,        0x4001440C,_
+                                _READ_WRITE ,__tim16_dier_bits);
+ 3480                           __IO_REG32_BIT(TIM16_SR,          0x40014410,_
+                                _READ_WRITE ,__tim16_sr_bits);
+ 3481                           __IO_REG32_BIT(TIM16_EGR,         0x40014414,_
+                                _READ_WRITE ,__tim16_egr_bits);
+ 3482                           __IO_REG32_BIT(TIM16_CCMR1,       0x40014418,_
+                                _READ_WRITE ,__tim16_ccmr1_bits);
+ 3483                           #define TIM16_OCMR1      TIM16_CCMR1
+ 3484                           #define TIM16_OCMR1_bit  TIM16_CCMR1_bit
+ 3485                           __IO_REG32_BIT(TIM16_CCER,        0x40014420,_
+                                _READ_WRITE ,__tim16_ccer_bits);
+ 3486                           __IO_REG32_BIT(TIM16_CNT,         0x40014424,_
+                                _READ_WRITE ,__tim16_cnt_bits);
+ 3487                           __IO_REG32_BIT(TIM16_PSC,         0x40014428,_
+                                _READ_WRITE ,__tim16_psc_bits);
+ 3488                           __IO_REG32_BIT(TIM16_ARR,         0x4001442C,_
+                                _READ_WRITE ,__tim16_arr_bits);
+ 3489                           __IO_REG32_BIT(TIM16_RCR,         0x40014430,_
+                                _READ_WRITE ,__tim16_rcr_bits);
+ 3490                           __IO_REG32_BIT(TIM16_CCR1,        0x40014434,_
+                                _READ_WRITE ,__tim16_ccr_bits);
+ 3491                           __IO_REG32_BIT(TIM16_BDTR,        0x40014444,_
+                                _READ_WRITE ,__tim16_bdtr_bits);
+ 3492                           __IO_REG32_BIT(TIM16_DCR,         0x40014448,_
+                                _READ_WRITE ,__tim16_dcr_bits);
+ 3493                           __IO_REG32_BIT(TIM16_DMAR,        0x4001444C,_
+                                _READ_WRITE ,__tim16_dmar_bits);
+ 3494                           
+ 3495                           /*********************************************
+                                ******************************
+ 3496                            **
+ 3497                            ** TIM17
+ 3498                            **
+ 3499                            *********************************************
+                                ******************************/
+ 3500                           __IO_REG32_BIT(TIM17_CR1,         0x40014800,_
+                                _READ_WRITE ,__tim16_cr1_bits);
+ 3501                           __IO_REG32_BIT(TIM17_CR2,         0x40014804,_
+                                _READ_WRITE ,__tim16_cr2_bits);
+ 3502                           __IO_REG32_BIT(TIM17_DIER,        0x4001480C,_
+                                _READ_WRITE ,__tim16_dier_bits);
+ 3503                           __IO_REG32_BIT(TIM17_SR,          0x40014810,_
+                                _READ_WRITE ,__tim16_sr_bits);
+ 3504                           __IO_REG32_BIT(TIM17_EGR,         0x40014814,_
+                                _READ_WRITE ,__tim16_egr_bits);
+ 3505                           __IO_REG32_BIT(TIM17_CCMR1,       0x40014818,_
+                                _READ_WRITE ,__tim16_ccmr1_bits);
+ 3506                           #define TIM17_OCMR1      TIM17_CCMR1
+ 3507                           #define TIM17_OCMR1_bit  TIM17_CCMR1_bit
+ 3508                           __IO_REG32_BIT(TIM17_CCER,        0x40014820,_
+                                _READ_WRITE ,__tim16_ccer_bits);
+ 3509                           __IO_REG32_BIT(TIM17_CNT,         0x40014824,_
+                                _READ_WRITE ,__tim16_cnt_bits);
+ 3510                           __IO_REG32_BIT(TIM17_PSC,         0x40014828,_
+                                _READ_WRITE ,__tim16_psc_bits);
+ 3511                           __IO_REG32_BIT(TIM17_ARR,         0x4001482C,_
+                                _READ_WRITE ,__tim16_arr_bits);
+ 3512                           __IO_REG32_BIT(TIM17_RCR,         0x40014830,_
+                                _READ_WRITE ,__tim16_rcr_bits);
+ 3513                           __IO_REG32_BIT(TIM17_CCR1,        0x40014834,_
+                                _READ_WRITE ,__tim16_ccr_bits);
+ 3514                           __IO_REG32_BIT(TIM17_BDTR,        0x40014844,_
+                                _READ_WRITE ,__tim16_bdtr_bits);
+ 3515                           __IO_REG32_BIT(TIM17_DCR,         0x40014848,_
+                                _READ_WRITE ,__tim16_dcr_bits);
+ 3516                           __IO_REG32_BIT(TIM17_DMAR,        0x4001484C,_
+                                _READ_WRITE ,__tim16_dmar_bits);
+ 3517                           
+ 3518                           /*********************************************
+                                ******************************
+ 3519                            **
+ 3520                            ** TIM6
+ 3521                            **
+ 3522                            *********************************************
+                                ******************************/
+ 3523                           __IO_REG32_BIT(TIM6_CR1,          0x40001000,_
+                                _READ_WRITE ,__tim6_cr1_bits);
+ 3524                           __IO_REG32_BIT(TIM6_CR2,          0x40001004,_
+                                _READ_WRITE ,__tim6_cr2_bits);
+ 3525                           __IO_REG32_BIT(TIM6_DIER,         0x4000100C,_
+                                _READ_WRITE ,__tim6_dier_bits);
+ 3526                           __IO_REG32_BIT(TIM6_SR,           0x40001010,_
+                                _READ_WRITE ,__tim6_sr_bits);
+ 3527                           __IO_REG32_BIT(TIM6_EGR,          0x40001014,_
+                                _READ_WRITE ,__tim6_egr_bits);
+ 3528                           __IO_REG32_BIT(TIM6_CNT,          0x40001024,_
+                                _READ_WRITE ,__tim6_cnt_bits);
+ 3529                           __IO_REG32_BIT(TIM6_PSC,          0x40001028,_
+                                _READ_WRITE ,__tim6_psc_bits);
+ 3530                           __IO_REG32_BIT(TIM6_ARR,          0x4000102C,_
+                                _READ_WRITE ,__tim6_arr_bits);
+ 3531                           
+ 3532                           /*********************************************
+                                ******************************
+ 3533                            **
+ 3534                            ** TIM7
+ 3535                            **
+ 3536                            *********************************************
+                                ******************************/
+ 3537                           __IO_REG32_BIT(TIM7_CR1,          0x40001400,_
+                                _READ_WRITE ,__tim6_cr1_bits);
+ 3538                           __IO_REG32_BIT(TIM7_CR2,          0x40001404,_
+                                _READ_WRITE ,__tim6_cr2_bits);
+ 3539                           __IO_REG32_BIT(TIM7_DIER,         0x4000140C,_
+                                _READ_WRITE ,__tim6_dier_bits);
+ 3540                           __IO_REG32_BIT(TIM7_SR,           0x40001410,_
+                                _READ_WRITE ,__tim6_sr_bits);
+ 3541                           __IO_REG32_BIT(TIM7_EGR,          0x40001414,_
+                                _READ_WRITE ,__tim6_egr_bits);
+ 3542                           __IO_REG32_BIT(TIM7_CNT,          0x40001424,_
+                                _READ_WRITE ,__tim6_cnt_bits);
+ 3543                           __IO_REG32_BIT(TIM7_PSC,          0x40001428,_
+                                _READ_WRITE ,__tim6_psc_bits);
+ 3544                           __IO_REG32_BIT(TIM7_ARR,          0x4000142C,_
+                                _READ_WRITE ,__tim6_arr_bits);
+ 3545                           
+ 3546                           /*********************************************
+                                ******************************
+ 3547                            **
+ 3548                            ** I2C1
+ 3549                            **
+ 3550                            *********************************************
+                                ******************************/
+ 3551                           __IO_REG32_BIT(I2C1_CR1,          0x40005400,_
+                                _READ_WRITE ,__i2c_cr1_bits);
+ 3552                           __IO_REG32_BIT(I2C1_CR2,          0x40005404,_
+                                _READ_WRITE ,__i2c_cr2_bits);
+ 3553                           __IO_REG32_BIT(I2C1_OAR1,         0x40005408,_
+                                _READ_WRITE ,__i2c_oar1_bits);
+ 3554                           __IO_REG32_BIT(I2C1_OAR2,         0x4000540C,_
+                                _READ_WRITE ,__i2c_oar2_bits);
+ 3555                           __IO_REG32_BIT(I2C1_DR,           0x40005410,_
+                                _READ_WRITE ,__i2c_dr_bits);
+ 3556                           __IO_REG32_BIT(I2C1_SR1,          0x40005414,_
+                                _READ_WRITE ,__i2c_sr1_bits);
+ 3557                           __IO_REG32_BIT(I2C1_SR2,          0x40005418,_
+                                _READ       ,__i2c_sr2_bits);
+ 3558                           __IO_REG32_BIT(I2C1_CCR,          0x4000541C,_
+                                _READ_WRITE ,__i2c_ccr_bits);
+ 3559                           __IO_REG32_BIT(I2C1_TRISE,        0x40005420,_
+                                _READ_WRITE ,__i2c_trise_bits);
+ 3560                           
+ 3561                           /*********************************************
+                                ******************************
+ 3562                            **
+ 3563                            ** I2C2
+ 3564                            **
+ 3565                            *********************************************
+                                ******************************/
+ 3566                           __IO_REG32_BIT(I2C2_CR1,          0x40005800,_
+                                _READ_WRITE ,__i2c_cr1_bits);
+ 3567                           __IO_REG32_BIT(I2C2_CR2,          0x40005804,_
+                                _READ_WRITE ,__i2c_cr2_bits);
+ 3568                           __IO_REG32_BIT(I2C2_OAR1,         0x40005808,_
+                                _READ_WRITE ,__i2c_oar1_bits);
+ 3569                           __IO_REG32_BIT(I2C2_OAR2,         0x4000580C,_
+                                _READ_WRITE ,__i2c_oar2_bits);
+ 3570                           __IO_REG32_BIT(I2C2_DR,           0x40005810,_
+                                _READ_WRITE ,__i2c_dr_bits);
+ 3571                           __IO_REG32_BIT(I2C2_SR1,          0x40005814,_
+                                _READ_WRITE ,__i2c_sr1_bits);
+ 3572                           __IO_REG32_BIT(I2C2_SR2,          0x40005818,_
+                                _READ       ,__i2c_sr2_bits);
+ 3573                           __IO_REG32_BIT(I2C2_CCR,          0x4000581C,_
+                                _READ_WRITE ,__i2c_ccr_bits);
+ 3574                           __IO_REG32_BIT(I2C2_TRISE,        0x40005820,_
+                                _READ_WRITE ,__i2c_trise_bits);
+ 3575                           
+ 3576                           /*********************************************
+                                ******************************
+ 3577                            **
+ 3578                            ** SPI1
+ 3579                            **
+ 3580                            *********************************************
+                                ******************************/
+ 3581                           __IO_REG32_BIT(SPI1_CR1,          0x40013000,_
+                                _READ_WRITE ,__spi_cr1_bits);
+ 3582                           __IO_REG32_BIT(SPI1_CR2,          0x40013004,_
+                                _READ_WRITE ,__spi_cr2_bits);
+ 3583                           __IO_REG32_BIT(SPI1_SR,           0x40013008,_
+                                _READ_WRITE ,__spi_sr_bits);
+ 3584                           __IO_REG32_BIT(SPI1_DR,           0x4001300C,_
+                                _READ_WRITE ,__spi_dr_bits);
+ 3585                           __IO_REG32_BIT(SPI1_CRCPR,        0x40013010,_
+                                _READ_WRITE ,__spi_crcpr_bits);
+ 3586                           __IO_REG32_BIT(SPI1_RXCRCR,       0x40013014,_
+                                _READ       ,__spi_rxcrcr_bits);
+ 3587                           __IO_REG32_BIT(SPI1_TXCRCR,       0x40013018,_
+                                _READ       ,__spi_txcrcr_bits);
+ 3588                           
+ 3589                           /*********************************************
+                                ******************************
+ 3590                            **
+ 3591                            ** SPI2
+ 3592                            **
+ 3593                            *********************************************
+                                ******************************/
+ 3594                           __IO_REG32_BIT(SPI2_CR1,          0x40003800,_
+                                _READ_WRITE ,__spi_cr1_bits);
+ 3595                           __IO_REG32_BIT(SPI2_CR2,          0x40003804,_
+                                _READ_WRITE ,__spi_cr2_bits);
+ 3596                           __IO_REG32_BIT(SPI2_SR,           0x40003808,_
+                                _READ_WRITE ,__spi_sr_bits);
+ 3597                           __IO_REG32_BIT(SPI2_DR,           0x4000380C,_
+                                _READ_WRITE ,__spi_dr_bits);
+ 3598                           __IO_REG32_BIT(SPI2_CRCPR,        0x40003810,_
+                                _READ_WRITE ,__spi_crcpr_bits);
+ 3599                           __IO_REG32_BIT(SPI2_RXCRCR,       0x40003814,_
+                                _READ       ,__spi_rxcrcr_bits);
+ 3600                           __IO_REG32_BIT(SPI2_TXCRCR,       0x40003818,_
+                                _READ       ,__spi_txcrcr_bits);
+ 3601                           
+ 3602                           /*********************************************
+                                ******************************
+ 3603                            **
+ 3604                            ** USART1
+ 3605                            **
+ 3606                            *********************************************
+                                ******************************/
+ 3607                           __IO_REG32_BIT(USART1_SR,         0x40013800,_
+                                _READ_WRITE ,__usart_sr_bits);
+ 3608                           __IO_REG32_BIT(USART1_DR,         0x40013804,_
+                                _READ_WRITE ,__usart_dr_bits);
+ 3609                           __IO_REG32_BIT(USART1_BRR,        0x40013808,_
+                                _READ_WRITE ,__usart_brr_bits);
+ 3610                           __IO_REG32_BIT(USART1_CR1,        0x4001380C,_
+                                _READ_WRITE ,__usart_cr1_bits);
+ 3611                           __IO_REG32_BIT(USART1_CR2,        0x40013810,_
+                                _READ_WRITE ,__usart_cr2_bits);
+ 3612                           __IO_REG32_BIT(USART1_CR3,        0x40013814,_
+                                _READ_WRITE ,__usart_cr3_bits);
+ 3613                           __IO_REG32_BIT(USART1_GTPR,       0x40013818,_
+                                _READ_WRITE ,__usart_gtpr_bits);
+ 3614                           
+ 3615                           /*********************************************
+                                ******************************
+ 3616                            **
+ 3617                            ** USART2
+ 3618                            **
+ 3619                            *********************************************
+                                ******************************/
+ 3620                           __IO_REG32_BIT(USART2_SR,         0x40004400,_
+                                _READ_WRITE ,__usart_sr_bits);
+ 3621                           __IO_REG32_BIT(USART2_DR,         0x40004404,_
+                                _READ_WRITE ,__usart_dr_bits);
+ 3622                           __IO_REG32_BIT(USART2_BRR,        0x40004408,_
+                                _READ_WRITE ,__usart_brr_bits);
+ 3623                           __IO_REG32_BIT(USART2_CR1,        0x4000440C,_
+                                _READ_WRITE ,__usart_cr1_bits);
+ 3624                           __IO_REG32_BIT(USART2_CR2,        0x40004410,_
+                                _READ_WRITE ,__usart_cr2_bits);
+ 3625                           __IO_REG32_BIT(USART2_CR3,        0x40004414,_
+                                _READ_WRITE ,__usart_cr3_bits);
+ 3626                           __IO_REG32_BIT(USART2_GTPR,       0x40004418,_
+                                _READ_WRITE ,__usart_gtpr_bits);
+ 3627                           
+ 3628                           /*********************************************
+                                ******************************
+ 3629                            **
+ 3630                            ** USART3
+ 3631                            **
+ 3632                            *********************************************
+                                ******************************/
+ 3633                           __IO_REG32_BIT(USART3_SR,         0x40004800,_
+                                _READ_WRITE ,__usart_sr_bits);
+ 3634                           __IO_REG32_BIT(USART3_DR,         0x40004804,_
+                                _READ_WRITE ,__usart_dr_bits);
+ 3635                           __IO_REG32_BIT(USART3_BRR,        0x40004808,_
+                                _READ_WRITE ,__usart_brr_bits);
+ 3636                           __IO_REG32_BIT(USART3_CR1,        0x4000480C,_
+                                _READ_WRITE ,__usart_cr1_bits);
+ 3637                           __IO_REG32_BIT(USART3_CR2,        0x40004810,_
+                                _READ_WRITE ,__usart_cr2_bits);
+ 3638                           __IO_REG32_BIT(USART3_CR3,        0x40004814,_
+                                _READ_WRITE ,__usart_cr3_bits);
+ 3639                           __IO_REG32_BIT(USART3_GTPR,       0x40004818,_
+                                _READ_WRITE ,__usart_gtpr_bits);
+ 3640                           
+ 3641                           /*********************************************
+                                ******************************
+ 3642                            **
+ 3643                            ** CEC
+ 3644                            **
+ 3645                            *********************************************
+                                ******************************/
+ 3646                           __IO_REG32_BIT(CEC_CFGR,          0x40007800,_
+                                _READ_WRITE ,__cec_cfgr_bits);
+ 3647                           __IO_REG32_BIT(CEC_OAR,           0x40007804,_
+                                _READ_WRITE ,__cec_oar_bits);
+ 3648                           __IO_REG32_BIT(CEC_PRE,           0x40007808,_
+                                _READ_WRITE ,__cec_pre_bits);
+ 3649                           __IO_REG32_BIT(CEC_ESR,           0x4000780C,_
+                                _READ       ,__cec_esr_bits);
+ 3650                           __IO_REG32_BIT(CEC_CSR,           0x40007810,_
+                                _READ_WRITE ,__cec_csr_bits);
+ 3651                           __IO_REG32_BIT(CEC_TXD,           0x40007814,_
+                                _READ_WRITE ,__cec_txd_bits);
+ 3652                           __IO_REG32_BIT(CEC_RXD,           0x40007818,_
+                                _READ       ,__cec_rxd_bits);
+ 3653                           
+ 3654                           /*********************************************
+                                ******************************
+ 3655                            **
+ 3656                            ** ADC1
+ 3657                            **
+ 3658                            *********************************************
+                                ******************************/
+ 3659                           __IO_REG32_BIT(ADC1_SR,           0x40012400,_
+                                _READ_WRITE ,__adc_sr_bits);
+ 3660                           __IO_REG32_BIT(ADC1_CR1,          0x40012404,_
+                                _READ_WRITE ,__adc_cr1_bits);
+ 3661                           __IO_REG32_BIT(ADC1_CR2,          0x40012408,_
+                                _READ_WRITE ,__adc_cr2_bits);
+ 3662                           __IO_REG32_BIT(ADC1_SMPR1,        0x4001240C,_
+                                _READ_WRITE ,__adc_smpr1_bits);
+ 3663                           __IO_REG32_BIT(ADC1_SMPR2,        0x40012410,_
+                                _READ_WRITE ,__adc_smpr2_bits);
+ 3664                           __IO_REG32_BIT(ADC1_JOFR1,        0x40012414,_
+                                _READ_WRITE ,__adc_jofr_bits);
+ 3665                           __IO_REG32_BIT(ADC1_JOFR2,        0x40012418,_
+                                _READ_WRITE ,__adc_jofr_bits);
+ 3666                           __IO_REG32_BIT(ADC1_JOFR3,        0x4001241C,_
+                                _READ_WRITE ,__adc_jofr_bits);
+ 3667                           __IO_REG32_BIT(ADC1_JOFR4,        0x40012420,_
+                                _READ_WRITE ,__adc_jofr_bits);
+ 3668                           __IO_REG32_BIT(ADC1_HTR,          0x40012424,_
+                                _READ_WRITE ,__adc_htr_bits);
+ 3669                           __IO_REG32_BIT(ADC1_LTR,          0x40012428,_
+                                _READ_WRITE ,__adc_ltr_bits);
+ 3670                           __IO_REG32_BIT(ADC1_SQR1,         0x4001242C,_
+                                _READ_WRITE ,__adc_sqr1_bits);
+ 3671                           __IO_REG32_BIT(ADC1_SQR2,         0x40012430,_
+                                _READ_WRITE ,__adc_sqr2_bits);
+ 3672                           __IO_REG32_BIT(ADC1_SQR3,         0x40012434,_
+                                _READ_WRITE ,__adc_sqr3_bits);
+ 3673                           __IO_REG32_BIT(ADC1_JSQR,         0x40012438,_
+                                _READ_WRITE ,__adc_jsqr_bits);
+ 3674                           __IO_REG32_BIT(ADC1_JDR1,         0x4001243C,_
+                                _READ       ,__adc_jdr_bits);
+ 3675                           __IO_REG32_BIT(ADC1_JDR2,         0x40012440,_
+                                _READ       ,__adc_jdr_bits);
+ 3676                           __IO_REG32_BIT(ADC1_JDR3,         0x40012444,_
+                                _READ       ,__adc_jdr_bits);
+ 3677                           __IO_REG32_BIT(ADC1_JDR4,         0x40012448,_
+                                _READ       ,__adc_jdr_bits);
+ 3678                           __IO_REG32_BIT(ADC1_DR,           0x4001244C,_
+                                _READ       ,__adc_dr_bits);
+ 3679                           
+ 3680                           /*********************************************
+                                ******************************
+ 3681                            **
+ 3682                            ** DAC
+ 3683                            **
+ 3684                            *********************************************
+                                ******************************/
+ 3685                           __IO_REG32_BIT(DAC_CR,            0x40007400,_
+                                _READ_WRITE ,__dac_cr_bits     );
+ 3686                           __IO_REG32_BIT(DAC_SWTRIGR,       0x40007404,_
+                                _WRITE      ,__dac_swtrigr_bits);
+ 3687                           __IO_REG32_BIT(DAC_DHR12R1,       0x40007408,_
+                                _READ_WRITE ,__dac_dhr12r1_bits);
+ 3688                           __IO_REG32_BIT(DAC_DHR12L1,       0x4000740C,_
+                                _READ_WRITE ,__dac_dhr12l1_bits);
+ 3689                           __IO_REG32_BIT(DAC_DHR8R1,        0x40007410,_
+                                _READ_WRITE ,__dac_dhr8r1_bits );
+ 3690                           __IO_REG32_BIT(DAC_DHR12R2,       0x40007414,_
+                                _READ_WRITE ,__dac_dhr12r2_bits);
+ 3691                           __IO_REG32_BIT(DAC_DHR12L2,       0x40007418,_
+                                _READ_WRITE ,__dac_dhr12l2_bits);
+ 3692                           __IO_REG32_BIT(DAC_DHR8R2,        0x4000741C,_
+                                _READ_WRITE ,__dac_dhr8r2_bits );
+ 3693                           __IO_REG32_BIT(DAC_DHR12RD,       0x40007420,_
+                                _READ_WRITE ,__dac_dhr12rd_bits);
+ 3694                           __IO_REG32_BIT(DAC_DHR12LD,       0x40007424,_
+                                _READ_WRITE ,__dac_dhr12ld_bits);
+ 3695                           __IO_REG32_BIT(DAC_DHR8RD,        0x40007428,_
+                                _READ_WRITE ,__dac_dhr8rd_bits );
+ 3696                           __IO_REG32_BIT(DAC_DOR1,          0x4000742C,_
+                                _READ       ,__dac_dor1_bits   );
+ 3697                           __IO_REG32_BIT(DAC_DOR2,          0x40007430,_
+                                _READ       ,__dac_dor2_bits   );
+ 3698                           __IO_REG32_BIT(DAC_SR,            0x40007434,_
+                                _READ_WRITE ,__dac_sr_bits     );
+ 3699                           
+ 3700                           /*********************************************
+                                ******************************
+ 3701                            **
+ 3702                            ** Flash
+ 3703                            **
+ 3704                            *********************************************
+                                ******************************/
+ 3705                           __IO_REG32_BIT(FLASH_ACR,         0x40022000,_
+                                _READ_WRITE ,__flash_acr_bits);
+ 3706                           __IO_REG32(    FLASH_KEYR,        0x40022004,_
+                                _WRITE      );
+ 3707                           __IO_REG32(    FLASH_OPTKEYR,     0x40022008,_
+                                _WRITE      );
+ 3708                           __IO_REG32_BIT(FLASH_SR,          0x4002200C,_
+                                _READ_WRITE ,__flash_sr_bits);
+ 3709                           __IO_REG32_BIT(FLASH_CR,          0x40022010,_
+                                _READ_WRITE ,__flash_cr_bits);
+ 3710                           __IO_REG32(    FLASH_AR,          0x40022014,_
+                                _WRITE      );
+ 3711                           __IO_REG32_BIT(FLASH_OBR,         0x4002201C,_
+                                _READ       ,__flash_obr_bits);
+ 3712                           __IO_REG32_BIT(FLASH_WRPR,        0x40022020,_
+                                _READ       ,__flash_wrpr_bits);
+ 3713                           
+ 3714                           /*********************************************
+                                ******************************
+ 3715                            **
+ 3716                            ** CRC
+ 3717                            **
+ 3718                            *********************************************
+                                ******************************/
+ 3719                           __IO_REG32(    CRC_DR,            0x40023000,_
+                                _READ_WRITE );
+ 3720                           __IO_REG32_BIT(CRC_IDR,           0x40023004,_
+                                _READ_WRITE ,__crc_idr_bits);
+ 3721                           __IO_REG32_BIT(CRC_CR,            0x40023008,_
+                                _WRITE      ,__crc_cr_bits);
+ 3722                           
+ 3723                           /* Assembler-specific declarations  **********
+                                ******************************/
+ 3724                           #ifdef __IAR_SYSTEMS_ASM__
+ 3725                           
+ 3726                           #endif    /* __IAR_SYSTEMS_ASM__ */
+ 3727                           
+ 3728                           /*********************************************
+                                ******************************
+ 3729                            **
+ 3730                            **  STM32F100xB Interrupt Lines
+ 3731                            **
+ 3732                            *********************************************
+                                ******************************/
+ 3733                           #define MAIN_STACK               0          /*
+                                 Main Stack                   */
+ 3734                           #define RESETI                   1          /*
+                                 Reset                        */
+ 3735                           #define NMII                     2          /*
+                                 Non-maskable Interrupt       */
+ 3736                           #define HFI                      3          /*
+                                 Hard Fault                   */
+ 3737                           #define MMI                      4          /*
+                                 Memory Management            */
+ 3738                           #define BFI                      5          /*
+                                 Bus Fault                    */
+ 3739                           #define UFI                      6          /*
+                                 Usage Fault                  */
+ 3740                           #define SVCI                    11          /*
+                                 SVCall                       */
+ 3741                           #define DMI                     12          /*
+                                 Debug Monitor                */
+ 3742                           #define PSI                     14          /*
+                                 PendSV                       */
+ 3743                           #define STI                     15          /*
+                                 SysTick                      */
+ 3744                           #define NVIC_WWDG               16          /*
+                                 Window Watchdog interrupt    */
+ 3745                           #define NVIC_PVD                17          /*
+                                 PVD through EXTI Line detection interrupt*/
+ 3746                           #define NVIC_TAMPER_STAMP       18          /*
+                                 Tamper and TimeStamp through EXTI line
+                                 interrupts */
+ 3747                           #define NVIC_RTC_WKUP           19          /*
+                                 RTC Wakeup through EXTI line interrupt*/
+ 3748                           #define NVIC_FLASH              20          /*
+                                 Flash global interrupt       */
+ 3749                           #define NVIC_RCC                21          /*
+                                 RCC global interrupt         */
+ 3750                           #define NVIC_EXTI0              22          /*
+                                 EXTI Line0 interrupt         */
+ 3751                           #define NVIC_EXTI1              23          /*
+                                 EXTI Line1 interrupt         */
+ 3752                           #define NVIC_EXTI2              24          /*
+                                 EXTI Line2 interrupt         */
+ 3753                           #define NVIC_EXTI3              25          /*
+                                 EXTI Line3 interrupt         */
+ 3754                           #define NVIC_EXTI4              26          /*
+                                 EXTI Line4 interrupt         */
+ 3755                           #define NVIC_DMA_CH1            27          /*
+                                 DMA Channel1 global interrupt*/
+ 3756                           #define NVIC_DMA_CH2            28          /*
+                                 DMA Channel2 global interrupt*/
+ 3757                           #define NVIC_DMA_CH3            29          /*
+                                 DMA Channel3 global interrupt*/
+ 3758                           #define NVIC_DMA_CH4            30          /*
+                                 DMA Channel4 global interrupt*/
+ 3759                           #define NVIC_DMA_CH5            31          /*
+                                 DMA Channel5 global interrupt*/
+ 3760                           #define NVIC_DMA_CH6            32          /*
+                                 DMA Channel6 global interrupt*/
+ 3761                           #define NVIC_DMA_CH7            33          /*
+                                 DMA Channel7 global interrupt*/
+ 3762                           #define NVIC_ADC1               34          /*
+                                 ADC global interrupt         */
+ 3763                           #define NVIC_EXTI9_5            39          /*
+                                 EXTI Line[9:5] interrupts    */
+ 3764                           #define NVIC_TIM1_BRK_TIM15     40          /*
+                                 TIM1 Break and TIM15 global interrupts
+                                 */
+ 3765                           #define NVIC_TIM1_UP_TIM6       41          /*
+                                 TIM1 Update and TIM16 global interrupts*/
+ 3766                           #define NVIC_TIM1_TRG_COM_TIM17 42          /*
+                                 TIM1 Trigger and Commutation and TIM17 global
+                                 interrupts */
+ 3767                           #define NVIC_TIM1_CC            43          /*
+                                 TIM1 Capture Compare interrupt */
+ 3768                           #define NVIC_TIM2               44          /*
+                                 TIM2 global interrupt        */
+ 3769                           #define NVIC_TIM3               45          /*
+                                 TIM3 global interrupt        */
+ 3770                           #define NVIC_TIM4               46          /*
+                                 TIM4 global interrupt        */
+ 3771                           #define NVIC_I2C1_EV            47          /*
+                                 I2C1 event interrupt         */
+ 3772                           #define NVIC_I2C1_ER            48          /*
+                                 I2C1 error interrupt         */
+ 3773                           #define NVIC_I2C2_EV            49          /*
+                                 I2C2 event interrupt         */
+ 3774                           #define NVIC_I2C2_ER            50          /*
+                                 I2C2 error interrupt         */
+ 3775                           #define NVIC_SPI1               51          /*
+                                 SPI1 global interrupt        */
+ 3776                           #define NVIC_SPI2               52          /*
+                                 SPI2 global interrupt        */
+ 3777                           #define NVIC_USART1             53          /*
+                                 USART1 global interrupt      */
+ 3778                           #define NVIC_USART2             54          /*
+                                 USART2 global interrupt      */
+ 3779                           #define NVIC_USART3             55          /*
+                                 USART3 global interrupt      */
+ 3780                           #define NVIC_EXTI15_10          56          /*
+                                 EXTI Line[15:10] interrupts  */
+ 3781                           #define NVIC_RTC_ALARM          57          /*
+                                 RTC alarm through EXTI line interrupt
+                                 */
+ 3782                           #define NVIC_CEC                58          /*
+                                 CEC global interrupt */
+ 3783                           #define NVIC_TIM6_DAC           70          /*
+                                 TIM6 global and DAC underrun interrupts
+                                 */
+ 3784                           #define NVIC_TIM7               71          /*
+                                 TIM7 global interrupt        */
+ 3785                           
+ 3786                           #endif    /* __IOSTM32F100xB_H */
+ 3787                           
+ 3788                           /*###DDF-INTERRUPT-BEGIN###
+ 3789                           Interrupt0   = NMI                  0x08
+ 3790                           Interrupt1   = HardFault            0x0C
+ 3791                           Interrupt2   = MemManage            0x10
+ 3792                           Interrupt3   = BusFault             0x14
+ 3793                           Interrupt4   = UsageFault           0x18
+ 3794                           Interrupt5   = SVC                  0x2C
+ 3795                           Interrupt6   = DebugMon             0x30
+ 3796                           Interrupt7   = PendSV               0x38
+ 3797                           Interrupt8   = SysTick              0x3C
+ 3798                           Interrupt9   = WWDG                 0x40
+ 3799                           Interrupt10  = PVD                  0x44
+ 3800                           Interrupt11  = TAMPER_STAMP         0x48
+ 3801                           Interrupt12  = RTC_WKUP             0x4C
+ 3802                           Interrupt13  = FLASH                0x50
+ 3803                           Interrupt14  = RCC                  0x54
+ 3804                           Interrupt15  = EXTI0                0x58
+ 3805                           Interrupt16  = EXTI1                0x5C
+ 3806                           Interrupt17  = EXTI2                0x60
+ 3807                           Interrupt18  = EXTI3                0x64
+ 3808                           Interrupt19  = EXTI4                0x68
+ 3809                           Interrupt20  = DMA_CH1              0x6C
+ 3810                           Interrupt21  = DMA_CH2              0x70
+ 3811                           Interrupt22  = DMA_CH3              0x74
+ 3812                           Interrupt23  = DMA_CH4              0x78
+ 3813                           Interrupt24  = DMA_CH5              0x7C
+ 3814                           Interrupt25  = DMA_CH6              0x80
+ 3815                           Interrupt26  = DMA_CH7              0x84
+ 3816                           Interrupt27  = ADC1                 0x88
+ 3817                           Interrupt28  = EXTI9_5              0x9C
+ 3818                           Interrupt29  = TIM1_BRK_TIM15       0xA0
+ 3819                           Interrupt30  = TIM1_UP_TIM6         0xA4
+ 3820                           Interrupt31  = TIM1_TRG_COM_TIM17   0xA8
+ 3821                           Interrupt32  = TIM1_CC              0xAC
+ 3822                           Interrupt33  = TIM2                 0xB0
+ 3823                           Interrupt34  = TIM3                 0xB4
+ 3824                           Interrupt35  = TIM4                 0xB8
+ 3825                           Interrupt36  = I2C1_EV              0xBC
+ 3826                           Interrupt37  = I2C1_ER              0xC0
+ 3827                           Interrupt38  = I2C2_EV              0xC4
+ 3828                           Interrupt39  = I2C2_ER              0xC8
+ 3829                           Interrupt40  = SPI1                 0xCC
+ 3830                           Interrupt41  = SPI2                 0xD0
+ 3831                           Interrupt42  = USART1               0xD4
+ 3832                           Interrupt43  = USART2               0xD8
+ 3833                           Interrupt44  = USART3               0xDC
+ 3834                           Interrupt45  = EXTI15_10            0xE0
+ 3835                           Interrupt46  = RTC_ALARM            0xE4
+ 3836                           Interrupt47  = CEC                  0xE8
+ 3837                           Interrupt48  = TIM6_DAC             0x118
+ 3838                           Interrupt49  = TIM7                 0x11C
+ 3839                           
+ 3840                           ###DDF-INTERRUPT-END###*/
+    3                           
+    4                           
+    5                                   PUBLIC  __iar_program_start
+    6                                   PUBLIC  __vector_table
+    7                           
+    8                                   SECTION .text:CODE:REORDER(1)
+    9                                   
+   10                                   ;; Keep vector table even if it's not
+                                 referenced
+   11                                   REQUIRE __vector_table
+   12                                   
+   13                                   THUMB
+   14                                   
+   15                                   
+   16                           __iar_program_start
+   17                                   
+   18                                                   
+   19                           ; Enable peripheral clocks
+   20                           ; Bit 4: Port C, Bit 3: Port B, Bit 2: Port
+                                 A
+   21                           GPIO_clk_ena
+   22    00000000 084E                          ldr     R6, =RCC_APB2ENR       
+                                                         ; R6 is pointer to
+                                                         register
+                                                ldr     R6, =RCC_APB2ENR      
+                         ; R6 is pointer to register
+                                ----------------------------------------------
+                       -----------------------------^
+                                "C:\Users\Tommy\Documents\ARM Projects\Project
+                       s\asm-led-blink\asm.s",22  Warning[440]: The section
+                        alignment is less than 2
+                                ^2. Data in literal pool may be misaligned
+                        after linking.
+   23    00000002 4FF01C00                      mov     R0, #0x001C            
+                                                             ; Turn on clocks
+                                                         for Ports A/B/C
+   24    00000006 3060                          str     R0, [R6]
+   25                           
+   26                           ; Port C push-pull
+   27                           GPIO_init
+   28    00000008 074E                          ldr     R6, =GPIOC_CRH
+                                                ldr     R6, =GPIOC_CRH
+                                --------------------------------------^
+                                "C:\Users\Tommy\Documents\ARM Projects\Project
+                       s\asm-led-blink\asm.s",28  Warning[440]: The section
+                        alignment is less than 2
+                                ^2. Data in literal pool may be misaligned
+                        after linking.
+   29    0000000A 0848                          ldr     R0, =0x44444433     ;
+                                                         CNF: 00, Mode:
+                                                         11
+                                                ldr     R0, =0x44444433     ;
+                        CNF: 00, Mode: 11
+                                ----------------------------------------------
+                       -----------------^
+                                "C:\Users\Tommy\Documents\ARM Projects\Project
+                       s\asm-led-blink\asm.s",29  Warning[440]: The section
+                        alignment is less than 2
+                                ^2. Data in literal pool may be misaligned
+                        after linking.
+   30    0000000C 3060                          str     R0, [R6]
+   31                           
+   32    0000000E 4FF48072                      mov     R2, #0x0100         ;
+                                                         PC8 on
+   33    00000012 4FF00003          mov R3, #0x0000         ; PC8 off
+   34    00000016 064E                          ldr     R6, =GPIOC_ODR      ;
+                                                         Pointer to Port C
+                                                         output data register
+                                                ldr     R6, =GPIOC_ODR      ;
+                        Pointer to Port C output data register
+                                ----------------------------------------------
+                       --------------------------------------^
+                                "C:\Users\Tommy\Documents\ARM Projects\Project
+                       s\asm-led-blink\asm.s",34  Warning[440]: The section
+                        alignment is less than 2
+                                ^2. Data in literal pool may be misaligned
+                        after linking.
+   35                                   
+   36                             
+   37                           main                    
+   38    00000018 3260                          str     R2, [R6]
+   39    0000001A 00BF              nop           ; breakpoint
+   40    0000001C 3360                          str     R3, [R6]
+   41    0000001E 00BF              nop           ; breakpoint
+   42    00000020 FAE7                          b       main 
+   43                           
+   44                                   ;; Forward declaration of sections.
+   44.1                                  TABLE
+   44.2  00000024 18100240              Reference on line 22
+   44.3  00000028 04100140              Reference on line 28
+   44.4  0000002C 33444444              Reference on line 29
+   44.5  00000030 0C100140              Reference on line 34
+   45                                   SECTION CSTACK:DATA:NOROOT(3)
+   46                                   SECTION .intvec:CODE:NOROOT(2)
+   47                                   
+   48                                   DATA
+   49                           
+   50                           __vector_table
+   51    00000000 ........              DCD     sfe(CSTACK)
+   52    00000004 ........              DCD     __iar_program_start
+   53                           
+   54    00000008 ........              DCD     NMI_Handler
+   55    0000000C ........              DCD     HardFault_Handler
+   56    00000010 ........              DCD     MemManage_Handler
+   57    00000014 ........              DCD     BusFault_Handler
+   58    00000018 ........              DCD     UsageFault_Handler
+   59    0000001C 00000000              DCD     0
+   60    00000020 00000000              DCD     0
+   61    00000024 00000000              DCD     0
+   62    00000028 00000000              DCD     0
+   63    0000002C ........              DCD     SVC_Handler
+   64    00000030 ........              DCD     DebugMon_Handler
+   65    00000034 00000000              DCD     0
+   66    00000038 ........              DCD     PendSV_Handler
+   67    0000003C ........              DCD     SysTick_Handler
+   68                           
+   69                           ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                                ;;;;;;
+   70                           ;;
+   71                           ;; Default interrupt handlers.
+   72                           ;;
+   73                           
+   74                                   PUBWEAK NMI_Handler
+   75                                   PUBWEAK HardFault_Handler
+   76                                   PUBWEAK MemManage_Handler
+   77                                   PUBWEAK BusFault_Handler
+   78                                   PUBWEAK UsageFault_Handler
+   79                                   PUBWEAK SVC_Handler
+   80                                   PUBWEAK DebugMon_Handler
+   81                                   PUBWEAK PendSV_Handler
+   82                                   PUBWEAK SysTick_Handler
+   83                           
+   84                                   SECTION .text:CODE:REORDER:NOROOT(1)
+   85                                   THUMB
+   86                           
+   87                           NMI_Handler
+   88                           HardFault_Handler
+   89                           MemManage_Handler
+   90                           BusFault_Handler
+   91                           UsageFault_Handler
+   92                           SVC_Handler
+   93                           DebugMon_Handler
+   94                           PendSV_Handler
+   95                           SysTick_Handler
+   96                           Default_Handler
+   97                           __default_handler
+   98                                   CALL_GRAPH_ROOT __default_handler,
+                                 "interrupt"
+   99                                   NOCALL __default_handler
+  100    00000000 FEE7                  B __default_handler
+  101                           
+  102                                   END
+##############################
+#           CRC:0            #
+#        Errors:   0         #
+#        Warnings: 5         #
+#         Bytes: 118         #
+##############################
+
+
+
+

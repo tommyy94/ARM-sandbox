@@ -1,0 +1,100 @@
+###############################################################################
+#
+# IAR ELF Linker V8.22.2.15995/W32 for ARM                05/Aug/2018  18:00:54
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\asm-led-blink\Debug\Exe\IAR-asm.out
+#    Map file     =  
+#        C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\asm-led-blink\Debug\List\IAR-asm.map
+#    Command line =  
+#        -f C:\Users\Tommy\AppData\Local\Temp\EWCCEB.tmp
+#        ("C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\asm-led-blink\Debug\Obj\asm.o" -o
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\asm-led-blink\Debug\Exe\IAR-asm.out" --redirect
+#        _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb --map
+#        "C:\Users\Tommy\Documents\ARM
+#        Projects\Projects\asm-led-blink\Debug\List\IAR-asm.map" --config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.0\arm\config\linker\ST\stm32f100xB.icf" --semihosting
+#        --no_library_search --entry __iar_program_start "C:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        8.0\arm\CMSIS\Lib\IAR\iar_cortexM3l_math.a" --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x08000000 { ro section .intvec };
+"P1":  place in [from 0x08000000 to 0x0801ffff] { ro };
+define block CSTACK with size = 2K, alignment = 8 { };
+define block HEAP with size = 2K, alignment = 8 { };
+"P2":  place in [from 0x20000000 to 0x20001fff] {
+          rw, block CSTACK, block HEAP };
+
+No sections matched the following patterns:
+
+  rw  in "P2"
+
+
+  Section   Kind        Address   Size  Object
+  -------   ----        -------   ----  ------
+"A0":                             0x40
+  .intvec   ro code  0x08000000   0x40  asm.o [1]
+                   - 0x08000040   0x40
+
+"P1":                             0x36
+  .text     ro code  0x08000040   0x34  asm.o [1]
+  .text     ro code  0x08000074    0x2  asm.o [1]
+                   - 0x08000076   0x36
+
+"P2":                            0x800
+  CSTACK             0x20000000  0x800  <Block>
+    CSTACK  uninit   0x20000000  0x800  <Block tail>
+                   - 0x20000800  0x800
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module          ro code  rw data
+    ------          -------  -------
+C:\Users\Tommy\Documents\ARM Projects\Projects\asm-led-blink\Debug\Obj: [1]
+    asm.o               118
+    --------------------------------
+    Total:              118
+
+    Linker created             2 048
+------------------------------------
+    Grand Total:        118    2 048
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address  Size  Type      Object
+-----                      -------  ----  ----      ------
+CSTACK$$Base            0x20000000         --   Gb  - Linker created -
+CSTACK$$Limit           0x20000800         --   Gb  - Linker created -
+__iar_program_start     0x08000041        Code  Gb  asm.o [1]
+__iar_systems$$module {Abs}
+                        0x00000001        Data  Gb  command line/config [2]
+__vector_table          0x08000000        Data  Gb  asm.o [1]
+
+
+[1] = C:\Users\Tommy\Documents\ARM Projects\Projects\asm-led-blink\Debug\Obj
+[2] = command line
+
+    118 bytes of readonly  code memory
+  2 048 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
