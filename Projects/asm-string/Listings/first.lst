@@ -1,0 +1,172 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ; MCU = STMl32F100RB
+    2 00000000         
+    3 00000000         ; Directives
+    4 00000000                 PRESERVE8
+    5 00000000                 THUMB
+    6 00000000         
+    7 00000000         ; Vector Table Mapped to Address 0 at Reset
+    8 00000000                 AREA             RESET, DATA, READONLY
+    9 00000000                 EXPORT           __Vectors
+   10 00000000         
+   11 00000000         __Vectors
+   12 00000000 20001000        DCD              0x20001000  ; stack pointer val
+                                                            ue when stack is em
+                                                            pty
+   13 00000004 00000000        DCD              Reset_Handler ; reset vector
+   14 00000008         
+   15 00000008                 ALIGN
+   16 00000008         
+   17 00000008         
+   18 00000008         string
+   19 00000008 56 65 72 
+              79 20 6E 
+              69 63 65 
+              20 73 75 
+              6D 6D 65 
+              72 00            DCB              "Very nice summer", 0
+   20 00000019         
+   21 00000019                 AREA             MYCODE, CODE, READONLY
+   22 00000000         
+   23 00000000                 ENTRY
+   24 00000000                 EXPORT           Reset_Handler
+   25 00000000         
+   26 00000000         
+   27 00000000         ; Subroutimes
+   28 00000000         printString
+   29 00000000 4806            LDR              R0, =string ; Load the address 
+                                                            of string into the 
+                                                            register R0 
+   30 00000002 F04F 0100       MOV              R1, #0      ; Initialize the co
+                                                            unter counting the 
+                                                            length of string
+   31 00000006         
+   32 00000006         loopCount
+   33 00000006 F810 2B01       LDRB             R2, [R0], #1 ; 1oad the charact
+                                                            er from the address
+                                                             R0 contains
+   34 0000000A B112            CBZ              R2, countDone ; If it is zero, 
+                                                            we are done, length
+                                                             in R1
+   35 0000000C F101 0101       ADD              R1, #1      ;             ; inc
+                                                            rement the counter 
+                                                            for length
+   36 00000010 E7F9            B                loopCount
+   37 00000012         
+   38 00000012         countDone
+   39 00000012 4770            BX               LR
+   40 00000014         
+   41 00000014         
+   42 00000014         Reset_Handler
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   43 00000014         
+   44 00000014         ; Main program
+   45 00000014         Start
+   46 00000014 F7FF FFF4       BL               printString
+   47 00000018 BF00            NOP
+   48 0000001A E7FB            B                Start
+   49 0000001C                 END
+              00000000 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\objects\first.d -o.\objects\first.o -I.\RTE\_Target_1 -IC:\Keil_
+v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include -IC:\Keil_v5\ARM\CMSIS\Incl
+ude --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 524" --pred
+efine="STM32F10X_MD_VL SETA 1" --list=.\listings\first.lst first.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 8 in file first.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 11 in file first.s
+   Uses
+      At line 9 in file first.s
+Comment: __Vectors used once
+string 00000008
+
+Symbol: string
+   Definitions
+      At line 18 in file first.s
+   Uses
+      At line 29 in file first.s
+Comment: string used once
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+MYCODE 00000000
+
+Symbol: MYCODE
+   Definitions
+      At line 21 in file first.s
+   Uses
+      None
+Comment: MYCODE unused
+Reset_Handler 00000014
+
+Symbol: Reset_Handler
+   Definitions
+      At line 42 in file first.s
+   Uses
+      At line 13 in file first.s
+      At line 24 in file first.s
+
+Start 00000014
+
+Symbol: Start
+   Definitions
+      At line 45 in file first.s
+   Uses
+      At line 48 in file first.s
+Comment: Start used once
+countDone 00000012
+
+Symbol: countDone
+   Definitions
+      At line 38 in file first.s
+   Uses
+      At line 34 in file first.s
+Comment: countDone used once
+loopCount 00000006
+
+Symbol: loopCount
+   Definitions
+      At line 32 in file first.s
+   Uses
+      At line 36 in file first.s
+Comment: loopCount used once
+printString 00000000
+
+Symbol: printString
+   Definitions
+      At line 28 in file first.s
+   Uses
+      At line 46 in file first.s
+Comment: printString used once
+6 symbols
+344 symbols in table
