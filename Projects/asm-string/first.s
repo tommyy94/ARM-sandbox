@@ -44,10 +44,6 @@ Reset_Handler
 ; Main program
 Start 
     BL      printString
-
-	
-    B       countDone
-    ALIGN
-    
+    NOP
     B       Start
     END
