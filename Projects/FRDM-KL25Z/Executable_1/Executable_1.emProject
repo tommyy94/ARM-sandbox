@@ -1,0 +1,56 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="asm-example" target="8" version="2">
+  <project Name="asm-example">
+    <configuration
+      Name="Common"
+      arm_architecture="v6M"
+      arm_core_type="Cortex-M0"
+      arm_endian="Little"
+      arm_fp_abi="Soft"
+      arm_fpu_type="None"
+      arm_linker_heap_size="1024"
+      arm_linker_process_stack_size="0"
+      arm_linker_stack_size="1024"
+      arm_linker_variant="SEGGER"
+      arm_simulator_memory_simulation_parameter="RX 00000000,00020000,FFFFFFFF;RWX 1ffff000,00004000,CDCDCDCD"
+      arm_target_device_name="MKL25Z128xxx4 (allow security)"
+      arm_target_interface_type="SWD"
+      debug_target_connection="J-Link"
+      link_linker_script_file="$(ProjectDir)/SEGGER_Flash.icf"
+      linker_output_format="hex"
+      linker_section_placements_segments="FLASH RX 0x00000000 0x00020000;RAM RWX 0x1ffff000 0x00004000"
+      project_directory=""
+      project_type="Executable" />
+    <folder Name="Source Files">
+      <configuration Name="Common" filter="c;cpp;cxx;cc;h;s;asm;inc" />
+      <file file_name="main.asm" />
+    </folder>
+    <folder Name="System Files">
+      <file file_name="Cortex_M_Startup.s" />
+      <file file_name="HardFaultHandler.S" />
+      <file file_name="SEGGER_THUMB_Startup.s" />
+      <file file_name="SEGGER_HardFaultHandler.c" />
+    </folder>
+    <folder Name="Include Files">
+      <file file_name="peripherals.h" />
+    </folder>
+    <configuration
+      Name="Debug"
+      arm_assembler_variant="gcc"
+      c_user_include_directories="."
+      debug_entry_point_symbol=""
+      debug_start_from_entry_point_symbol="Yes"
+      link_include_standard_libraries="No" />
+  </project>
+  <configuration
+    Name="Debug"
+    c_preprocessor_definitions="DEBUG"
+    gcc_debugging_level="Level 3"
+    gcc_optimization_level="None" />
+  <configuration
+    Name="Release"
+    c_preprocessor_definitions="NDEBUG"
+    gcc_debugging_level="None"
+    gcc_omit_frame_pointer="Yes"
+    gcc_optimization_level="Level 1" />
+</solution>
